@@ -10,24 +10,24 @@ from pprint import pprint
 ACCESS_TOKEN = 'Mitwo0cwfer47Lvx51CTawELNJt9OYknMfP5WOvmNvJcYspgo9dGYDQiEFlL'
 
 r = requests.get('https://zenodo.org/api/deposit/depositions',
-                params={'access_token': ACCESS_TOKEN})
+                 params={'access_token': ACCESS_TOKEN})
 
 
-def zenodo_del_unpublished(token, *, ids:Union[str, list]):
+def zenodo_del_unpublished(token, *, ids: Union[str, list]):
     def del_check(res):
         if res.status_code == 204:
-            print('del %s success'%id)
+            print('del %s success' % id)
         elif res.status_code == 404:
             print('Deposition file does not exist')
         elif res.statis_code == 403:
             print('Deleting an already published deposition')
-    
+
     def ids_list_gen(ids):
         ids_list = list()
         if ids == 'all':
             if input('clear all unpublished registration? y/n') == 'y':
                 r = requests.get('https://zenodo.org/api/deposit/depositions',
-                    params={'access_token': token}).json()
+                                 params={'access_token': token}).json()
                 for item in r:
                     ids_list.append(item['id'])
             else:
@@ -37,11 +37,11 @@ def zenodo_del_unpublished(token, *, ids:Union[str, list]):
         elif isinstance(ids, list) and len(ids) > 0:
             ids_list = ids
         return ids_list
-    
+
     ids_list = ids_list_gen(ids)
     for id in ids_list:
-        r = requests.delete('https://zenodo.org/api/deposit/depositions/%s'%id,
-            params={'access_token': token})
+        r = requests.delete('https://zenodo.org/api/deposit/depositions/%s' % id,
+                            params={'access_token': token})
         del_check(r)
         sleep(1)
 

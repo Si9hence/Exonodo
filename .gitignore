@@ -116,8 +116,4 @@ dmypy.json
 # Coutom path
 Archive/
 sample_data/
-sample_data/mnt/data/exomol/exomol3_data/AlH/26Al-1H/AlHambra/27Al-1H__AlHambra.R1000_0.3-50mu.ktable.ARCiS.fits.gz
-sample_data/mnt/data/exomol/exomol3_data/AlH/26Al-1H/AlHambra/27Al-1H__AlHambra.R1000_0.3-50mu.ktable.petitRADTRANS.h5
-sample_data/mnt/data/exomol/exomol3_data/AlH/26Al-1H/AlHambra/27Al-1H__AlHambra.R1000_0.3-50mu.ktable.petitRADTRANS.h5
-sample_data/mnt/data/exomol/exomol3_data/AlH/26Al-1H/AlHambra/27Al-1H__AlHambra.R1000_0.3-50mu.ktable.petitRADTRANS.h5
-sample_data/mnt/data/exomol/exomol3_data/AlH/26Al-1H/AlHambra/missing.txt
+
