@@ -94,8 +94,9 @@ def zenodo_decoder(data: dict, *,
             res['description'] += 'Definitions file:<br>%s<br>' % file_name
             res['description'] += reference_ExoMol
         else:
-            res['description'] += '<br>{des}:<br>'.format(
-                des=data[item]['description'])
+            
+            res['description'] += '{title}<br>{des}:<br>'.format(
+                title=item, des=data[item]['description'])
             for cnt, file in enumerate(data[item]['files']):
                 file_name = file['file_name']
                 res['files'].append(file_name)
@@ -279,7 +280,7 @@ def zenodo_metadata(*, data: dict, res: dict, db: str, isotope: str, path_file: 
         }
     }
 
-    for key in data:
+    for key in data['data']:
         if 'opacity' in key:
             metadata['keywords'] += ['Opacities', 'ExoMolOP']
     return metadata
@@ -292,21 +293,21 @@ def zenodo_main(data: dict, *, token: str = '', path_root: str):
                 if isinstance(data[cat][molecule][isotope], str):
                     continue
 
-                folder = data[cat][molecule][isotope]
-                db = find_recommend(folder)
+                isot = data[cat][molecule][isotope]
+                db = find_recommend(isot)
                 if db is False:
                     print('no recommended db found, {isotope}skipped'.format(isotope=isotope))
                 path_file = path_root + \
-                    '/'.join(folder[db]['url'].split('/')[-3::])
+                    '/'.join(isot[db]['url'].split('/')[-3::])
 
-                res = zenodo_decoder(data=folder[db]['data'],
-                                     skips=['Spectroscopic', 'opacity', 'Spectrum overview'])
+                res = zenodo_decoder(data=isot[db],
+                                     skips=['Spectroscopic', 'Spectrum overview'])
                 r = zenodo_ini(token=token)
                 bucket_url = r.json()["links"]["bucket"]
                 deposit_id = r.json()['id']
                 # tbc
                 metadata = zenodo_metadata(
-                    data=data, res=res, db=db, isotope=isotope, path_file=path_file)
+                    data=isot[db], res=res, db=db, isotope=isotope, path_file=path_file)
 
                 zenodo_fill(deposit_id=deposit_id,
                             metadata=metadata, token=token)

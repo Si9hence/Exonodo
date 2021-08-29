@@ -93,6 +93,7 @@ def get_data_general(item):
     return {label:{'description':description, 'references':references, 'files':files}}
 
 # url = 'https://exomol.com/data/molecules/MgH/24Mg-1H/MoLLIST/'
+url = 'https://exomol.com/data/molecules/AlH/27Al-1H/AlHambra/'
 def get_data(url):
     s = HTMLSession()
     r = s.get(url)
