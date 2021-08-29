@@ -6,15 +6,29 @@ import csv
 
 
 def find_recommend(data: dict):
+
+    def find_prime(res):
+        prime = ['MoLLIST']
+        for db in res:
+            if db in prime:
+                return db
+        return False
+
     res = []
     for item in data:
         if isinstance(data[item], dict):
             if data[item]['recommended']:
                 res.append(item)
+    
     if len(res) > 0:
-        return res[0]
+        if find_prime(res):
+            return find_prime(res)
+        else:
+            return res[0]
     else:
         return False
+
+
 
 
 def remove_skipped_data(data: dict, *, skips: list = ['Spectroscopic', 'Spectrum overview']):
@@ -280,6 +294,8 @@ def zenodo_main(data: dict, *, token: str = '', path_root: str):
 
                 folder = data[cat][molecule][isotope]
                 db = find_recommend(folder)
+                if db is False:
+                    print('no recommended db found, {isotope}skipped'.format(isotope=isotope))
                 path_file = path_root + \
                     '/'.join(folder[db]['url'].split('/')[-3::])
 

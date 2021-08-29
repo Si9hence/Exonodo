@@ -4,6 +4,7 @@ import json
 from typing import Union
 from time import sleep
 from pprint import pprint
+import zenodo_reg
 # from requests import status_codes
 # from requests_html import HTMLSession
 
@@ -69,10 +70,27 @@ def molecule_display(data, flag=False):
     return res
 
 
-# info = json.load(open('../Archive/data_AlH.json', 'r'))
+def recommend_analysis(data):
+    res = dict()
+    for cat in data:
+        res[cat] = dict()
+        for molecule in data[cat]:
+            res[cat][molecule] = dict()
+            for isotope in data[cat][molecule]:
+                if isinstance(data[cat][molecule][isotope], dict):
+                    tmp = []
+                    for db in data[cat][molecule][isotope]:
+                        if isinstance(data[cat][molecule][isotope][db], dict):
+                            if data[cat][molecule][isotope][db]['recommended']:
+                                tmp.append(db)
+                    res[cat][molecule][isotope] = zenodo_reg.find_recommend(data[cat][molecule][isotope])
+    return res
 
-# data = info
-# path_root = '../sample_data/mnt/data/exomol/exomol3_data/'
-# # isotope = '26Al1H'
-# # folder = data[isotope]
-# # db = find_recommend(folder)
+if __name__ == '__main__':
+    info = json.load(open('../Archive/data_metal copy.json', 'r'))
+    res = recommend_analysis(info)
+    # data = info
+    # path_root = '../sample_data/mnt/data/exomol/exomol3_data/'
+    # # isotope = '26Al1H'
+    # # folder = data[isotope]
+    # # db = find_recommend(folder)

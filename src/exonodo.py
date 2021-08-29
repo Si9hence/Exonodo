@@ -50,7 +50,6 @@ class exonodo:
     def del_unpublished(self, ids: Union[str, list] = 'all'):
         zenodo_sup.zenodo_del_unpublished(token=self.token, ids=ids)
 
-
 if __name__ == '__main__':
     xx = exonodo(token='87EdGUa0eTuaYZMkc4PFrZnlyQrTDc3Eq2LnQKgXhyHs2UfhjHygqC3nH5YL',
                  path_info='../archive/data_AlH.json',
