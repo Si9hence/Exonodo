@@ -153,13 +153,15 @@ def zenodo_upload(*, deposit_id: str, bucket_url: str, files: list, path_root: s
             file_path = file
         elif isinstance(path_root, str):
             file_path = '/'.join([path_root, file])
-
-        with open(file_path, "rb") as fp:
-            r = requests.put(
-                "%s/%s" % (bucket_url, file_name),
-                data=fp,
-                params={'access_token': token},
-            )
+        try:
+            with open(file_path, "rb") as fp:
+                r = requests.put(
+                    "%s/%s" % (bucket_url, file_name),
+                    data=fp,
+                    params={'access_token': token},
+                )
+        except:
+            print(file_path + 'does not exist in the directory')
 
     if r.status_code == 200:
         print('deposition id:{deposit_id} auto uploading is successful'.format(
