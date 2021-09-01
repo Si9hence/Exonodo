@@ -86,6 +86,23 @@ def recommend_analysis(data):
                     res[cat][molecule][isotope] = zenodo_reg.find_recommend(data[cat][molecule][isotope])
     return res
 
+def print_data(data):
+    res = dict()
+    for cat in data:
+        res[cat] = dict()
+        for molecule in data[cat]:
+            res[cat][molecule] = dict()
+            for isotope in data[cat][molecule]:
+                if isinstance(data[cat][molecule][isotope], dict):
+                    res[cat][molecule][isotope] = dict()
+                    for db in data[cat][molecule][isotope]:
+                        if isinstance(data[cat][molecule][isotope][db], dict):
+                            if data[cat][molecule][isotope][db]['recommended']:
+                                res[cat][molecule][isotope][db] = []
+                                res[cat][molecule][isotope][db] = list(data[cat][molecule][isotope][db]['data'].keys())
+    return res
+
+
 if __name__ == '__main__':
     info = json.load(open('../Archive/data_metal copy.json', 'r'))
     res = recommend_analysis(info)

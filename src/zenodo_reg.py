@@ -29,8 +29,6 @@ def find_recommend(data: dict):
         return False
 
 
-
-
 def remove_skipped_data(data: dict, *, skips: list = ['Spectroscopic', 'Spectrum overview']):
     tmp = []
 
@@ -64,7 +62,10 @@ def keep_kept_data(data: dict, *,
 def zenodo_decoder(data: dict, *,
                    skips: list = ['Spectroscopic',
                                   'Spectrum overview'],
-                   keeps: list = ['Definitions file', 'line list', 'partition function', 'opacity']):
+                   keeps: list = ['Definitions file',
+                                  'line list',
+                                  'partition function',
+                                  'opacity']):
     """
         data: dict()
             in root[molecule type][molecule][isotope][database][data]
@@ -83,10 +84,11 @@ def zenodo_decoder(data: dict, *,
     reference_base = """J. Tennyson, S.N. Yurchenko A.F. Al-Refaie, V.H.J. Clark, K.L. Chubb,E.K. Conway, A. Dewan, M.N. Gorman, C. Hill, A.E. Lynas-Gray, T. Mellor, L.K. McKemmish, A. Owens, O.L. Polyansky, M. Semenov, W. Somogyi, G. Tinetti, A. Upadhyay, I. Waldmann, Y. Wang, S. Wright and O.P. Yurchenko, The 2020 release of the ExoMol database: molecular line lists for exoplanet and other hot atmospheres, J. Quant. Spectrosc. Rad. Transf., 255, 107228 (2020).[https://doi.org/10.1016/j.jqsrt.2020.107228.]"""
     reference_ExoMol = "Root references for ExoMol database: <br>{space}1. {ref}<br>".format(
         space=insert_space(n=2), ref=reference_base)
-    descrption_ini = 'The dataset is an archive of ExoMol page{url}.<br> Please check the reference details in the following description.<br><br>'.format(
+    descrption_ini = 'The dataset is an archive of ExoMol page, {url}.<br> Please check the reference details according to the following description or directly from the website.<br><br>'.format(
         url=url)
-    res = {'description': descrption_ini, 'reference': set(
-        [reference_base]), 'files': list()}
+    res = {'description': descrption_ini,
+           'reference': set([reference_base]),
+           'files': list()}
     for item in data:
         if item == 'Definitions file':
             file_name = data[item]['url'].split('/')[-1]
@@ -95,7 +97,7 @@ def zenodo_decoder(data: dict, *,
             res['description'] += reference_ExoMol
         else:
             
-            res['description'] += '{title}<br>{des}:<br>'.format(
+            res['description'] += '<br>{title}<br>{des}:<br>'.format(
                 title=item, des=data[item]['description'])
             for cnt, file in enumerate(data[item]['files']):
                 file_name = file['file_name']
@@ -168,121 +170,96 @@ def zenodo_upload(*, deposit_id: str, bucket_url: str, files: list, path_root: s
 
 
 def zenodo_metadata(*, data: dict, res: dict, db: str, isotope: str, path_file: str):
-    def find_version(path_def):
+    
+    def search_version(path_def):
         info = csv.reader(open(path_def, 'r'))
         for item in info:
             if 'Version number' in item[0]:
                 return item[0].split(' ')[0]
 
-    creators = [
-        {
-            "name": "Jonathan Tennyson",
-            "affiliation": "University College London",
-            "orcid": "0000-0002-4994-5238"
-        },
-        {
-            "name": "Sergei N. Yurchenko",
-            "affiliation": "University College London",
-            "orcid": "0000-0001-9286-9501"
-        },
-        {
-            "name": "Ahmed F. Al-Refaie",
-            "affiliation": "University College London",
-            "orcid": "0000-0003-2241-5330"
-        },
-        {
-            "name": "Victoria H. J. Clark",
-            "affiliation": "University College London",
-            "orcid": "0000-0002-4384-2625"
-        },
-        {
-            "name": "Katy L. Chubb",
-            "affiliation": "SRON Netherlands Institute for Space Research",
-            "orcid": "0000-0002-4552-4559"
-        },
-        {
-            "name": "Eamon K. Conway",
-            "affiliation": "Harvard-Smithsonian Center for Astrophysics",
-            "orcid": "0000-0002-6471-9474"
-        },
-        {
-            "name": "Akhil Dewan",
-            "affiliation": "Atkins"
-        },
-        {
-            "name": "Maire N. Gorman",
-            "affiliation": "Aberystwyth University",
-        },
-        {
-            "name": "Christian Hill",
-            "affiliation": "International Atomic Energy Agency",
-            "orcid": "0000-0001-6604-0126"
-        },
-        {
-            "name": "A.E. Lynas-Gray",
-            "affiliation": "University of Oxford",
-        },
-        {
-            "name": "Thomas Mellor"
-        },
-        {
-            "name": "Laura K. McKemmish"
-        },
-        {
-            "name": "Alec Owens"
-        },
-        {
-            "name": "Oleg L. Polyansky"
-        },
-        {
-            "name": "Mikhail Semenov"
-        },
-        {
-            "name": "Wilfrid Somogyi"
-        },
-        {
-            "name": "Giovanna Tinetti"
-        },
-        {
-            "name": "Apoorva Upadhyay"
-        },
-        {
-            "name": "Ingo Waldmann"
-        },
-        {
-            "name": "Yixin Wang"
-        },
-        {
-            "name": "Samuel Wright"
-        },
-        {
-            "name": "Olga P. Yurchenko"
+    def match_creators(res):
+        creators_info = {
+            "Tennyson, J.": {"affiliation": "University College London",
+                             "orcid": "0000-0002-4994-5238"},
+            "Yurchenko, S. N.": {"affiliation": "University College London",
+                                 "orcid": "0000-0001-9286-9501"},
+            "Williams, H.": {"affiliation": "University College London"},
+            "Victoria H. J. Clark": {"affiliation": "University College London",
+                                     "orcid": "0000-0002-4384-2625"},
+            "Leyland, P. C.": {"affiliation": "University College London"},
+            "Chubb, K. L.": {"affiliation": "SRON Netherlands Institute for Space Research",
+                             "orcid": "0000-0002-4552-4559"},
+            "Lodi, L.": {"affiliation": "University College London"},
+            "Rocchetto, M.": {"affiliation": "University College London"},
+            "Waldmann, I.": {"affiliation": "University College London"},
+            "Barstow, J. K.": {"affiliation": "University College London"},
+            "Al-Refaie, A. F": {"affiliation": "University College London"},
+            "Molliere, P.": {"affiliation": "Max Planck Institute for Astronomy"}
         }
-    ]
+        creators = set()
+        tmp = []
+        for ref in list(res['reference']):
+            if "[https://doi.org/10.1016/j.jqsrt.2020.107228.]" in ref:
+                pass
+            else:
+                tmp = list(map(str.strip, ref.split("\"")[0].split(',')[:-1]))
+            creators.update(set(", ".join(item) for item in zip(tmp[0::2], tmp[1::2])))
+        creators_meta = list()
+        for creator in creators:
+            creators_meta.append({'name':creator})
+            if creator in creators_info:
+                creators_meta[-1].update(creators_info[creator])
+            else:
+                pass
+        return creators_meta
+    
+    def match_keywords(data):
+        keywords = ["ExoMol"]
+        for key in data['data']:
+            if 'opacity' in key:
+                keywords += ['Opacity', 'ExoMolOP']
+            elif 'line list' in key:
+                keywords += ['line list']
+            elif 'partition function' in key:
+                keywords += ['partition function']
+        return keywords
+
+    def match_grants(data):
+        grants = []
+        for key in data['data']:
+            if 'opacity' in key:
+                grants += [{"id": "10.13039/501100000780::776403"}]
+            elif 'line list' or 'partition function' in key:
+                grants += [{"id": "10.13039/501100000780::883830"}, {"id": "267219"}, {"id": "10.13039/501100000690::ST/R000476/1"}]
+        return grants
     path_def = '/'.join([path_file,
                          [item for item in res['files'] if '.def' in item][0]])
-    version = find_version(path_def)
+    
+    version = search_version(path_def)
+    creators = match_creators(res)
     publication_date = '-'.join([version[0:4], version[4:6], version[6::]])
+    keywords = match_keywords(data)
+    grants = match_grants(data)
+    references = list(res['reference'])
+    description = res['description']
     metadata = {
         'metadata': {
             'title': 'The {db} dataset for {isotope}'.format(db=db, isotope=isotope),
             'upload_type': 'dataset',
-            'description': res['description'],
+            'description': description,
             'creators': creators,
-            'references': list(res['reference']),
+            'references': references,
             'license': "CC-BY-4.0",
             'publication_date': publication_date,
             'access_right': "open",
             'communities': [{'identifier': "exomol"}],
-            'keywords': ["ExoMol"],
+            'keywords': keywords,
             'version': version,
-            'grants': [{"id": "10.13039/501100000780::883830"}, {"id": "267219"}, {"id": "10.13039/501100000780::776403"}, {"id": "10.13039/501100000690::ST/R000476/1"}]
+            'grants': grants
         }
     }
 
-    for key in data['data']:
-        if 'opacity' in key:
-            metadata['keywords'] += ['Opacities', 'ExoMolOP']
+
     return metadata
 
 

@@ -1,6 +1,6 @@
 from os import path
 import zenodo_reg
-import exomol_arc
+# import exomol_arc
 import zenodo_sup
 import json
 from typing import Union
@@ -52,7 +52,7 @@ class exonodo:
 
 if __name__ == '__main__':
     xx = exonodo(token='87EdGUa0eTuaYZMkc4PFrZnlyQrTDc3Eq2LnQKgXhyHs2UfhjHygqC3nH5YL',
-                 path_info='../archive/data_AlH.json',
+                 path_info='../archive/data_26Al1H.json',
                  path_root='../sample_data/mnt/data/exomol/exomol3_data/')
 
     xx.del_unpublished()
