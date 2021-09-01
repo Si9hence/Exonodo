@@ -178,6 +178,7 @@ def zenodo_metadata(*, data: dict, res: dict, db: str, isotope: str, path_file: 
                 return item[0].split(' ')[0]
 
     def match_creators(res):
+    
         creators_info = {
             "Tennyson, J.": {"affiliation": "University College London",
                              "orcid": "0000-0002-4994-5238"},
@@ -196,14 +197,17 @@ def zenodo_metadata(*, data: dict, res: dict, db: str, isotope: str, path_file: 
             "Al-Refaie, A. F": {"affiliation": "University College London"},
             "Molliere, P.": {"affiliation": "Max Planck Institute for Astronomy"}
         }
-        creators = set()
+        creators = []
         tmp = []
         for ref in list(res['reference']):
             if "[https://doi.org/10.1016/j.jqsrt.2020.107228.]" in ref:
                 pass
             else:
                 tmp = list(map(str.strip, ref.split("\"")[0].split(',')[:-1]))
-            creators.update(set(", ".join(item) for item in zip(tmp[0::2], tmp[1::2])))
+            for item in [", ".join(item) for item in zip(tmp[0::2], tmp[1::2])]:
+                if item not in creators:
+                    creators.append(item)
+            # creators.update(set(", ".join(item) for item in zip(tmp[0::2], tmp[1::2])))
         creators_meta = list()
         for creator in creators:
             creators_meta.append({'name':creator})
@@ -259,7 +263,6 @@ def zenodo_metadata(*, data: dict, res: dict, db: str, isotope: str, path_file: 
         }
     }
 
-
     return metadata
 
 
@@ -296,7 +299,7 @@ if __name__ == '__main__':
 
     ACCESS_TOKEN = 'Mitwo0cwfer47Lvx51CTawELNJt9OYknMfP5WOvmNvJcYspgo9dGYDQiEFlL'
     info = json.load(open('../Archive/data_AlH.json', 'r'))
-
+    pf = "C:\\Users\\Yulin\\OneDrive\\UCL\\Course\\Project\\Jonathan\\Exonodo\\sample_data\\mnt\\data\\exomol\\exomol3_data\\AlH\\26Al-1H\\AlHambra"
     path_root = '../sample_data/mnt/data/exomol/exomol3_data/'
     cat = 'metal hydrides'
     molecule = 'AlH'
@@ -306,4 +309,5 @@ if __name__ == '__main__':
 
     info = json.load(open('../Archive/data_26Al1H.json', 'r'))
     res = zenodo_decoder(data)
+    md = zenodo_metadata(data=data, res=res, db=db, isotope=isotope, path_file=pf)
     # zenodo_main(data=info, token=ACCESS_TOKEN, path_root=path_root)
