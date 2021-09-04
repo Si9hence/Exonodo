@@ -1,0 +1,53 @@
+{
+    "metal hydrides": {
+        "AlH": {
+            "url": "https://exomol.com/data/molecules/AlH",
+            "26Al1H": {
+                "url": "https://exomol.com/data/molecules/AlH/26Al-1H",
+                "AlHambra": {
+                    "url": "https://exomol.com/data/molecules/AlH/26Al-1H/AlHambra",
+                    "recommended": true,
+                    "data": {
+                        "Definitions file": {
+                            "url": "https://exomol.com/db/AlH/26Al-1H/AlHambra/26Al-1H__AlHambra.def"
+                        },
+                        "Spectroscopic Model": {
+                            "url": "https://exomol.com/models/AlH/26Al-1H/AlHambra/"
+                        },
+                        "AlHambra: line list": {
+                            "description": "The AlHambra calculated line list for AlH (X and A states)",
+                            "references": [
+                                "Yurchenko, S. N., Williams, H., Leyland, P. C., Lodi, L., Tennyson, J., \"ExoMol linelists XXVIII: the rovibronic spectrum of AlH\", Monthly Notices of the Royal Astronomical Society 479, 1401-1411 (2018). [https://doi.org/10.1093/mnras/sty1524][18YuWiLe.AlH]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "26Al-1H__AlHambra.trans.bz2",
+                                    "description": "Frequency ordered transitions of (26Al)(1H)",
+                                    "url": "https://exomol.com/db/AlH/26Al-1H/AlHambra/26Al-1H__AlHambra.trans.bz2"
+                                },
+                                {
+                                    "file_name": "26Al-1H__AlHambra.states.bz2",
+                                    "description": "AlHambra line list for AlH: labelled rovibronic states of (26Al)(1H)",
+                                    "url": "https://exomol.com/db/AlH/26Al-1H/AlHambra/26Al-1H__AlHambra.states.bz2"
+                                }
+                            ]
+                        },
+                        "AlHambra: partition function": {
+                            "description": "The AlHambra calculated line list for AlH (X and A states)",
+                            "references": [
+                                "Yurchenko, S. N., Williams, H., Leyland, P. C., Lodi, L., Tennyson, J., \"ExoMol linelists XXVIII: the rovibronic spectrum of AlH\", Monthly Notices of the Royal Astronomical Society 479, 1401-1411 (2018). [https://doi.org/10.1093/mnras/sty1524][18YuWiLe.AlH]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "26Al-1H__AlHambra.pf",
+                                    "description": "AlHambra line list for AlH: partition function of (26Al)(1H)",
+                                    "url": "https://exomol.com/db/AlH/26Al-1H/AlHambra/26Al-1H__AlHambra.pf"
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

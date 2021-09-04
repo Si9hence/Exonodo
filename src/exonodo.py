@@ -1,32 +1,28 @@
 from os import path
 import zenodo_reg
-# import exomol_arc
+import exomol_arc
 import zenodo_sup
 import json
 from typing import Union
-# info = {'token':'Mitwo0cwfer47Lvx51CTawELNJt9OYknMfP5WOvmNvJcYspgo9dGYDQiEFlL',}
-# class info_group:
-#     def __init__(self, info):
-#         self.token = info['token']
-#     # token = 'Mitwo0cwfer47Lvx51CTawELNJt9OYknMfP5WOvmNvJcYspgo9dGYDQiEFlL'
-#     def set_token(self, token):
-#         self.token = token
-
+from argparse import ArgumentParser
 
 class exonodo:
 
-    def __init__(self, *, token='', path_info='', path_root='') -> None:
+    def __init__(self, *, token='', path_info='', path_root='', path_arc='', sub_set=[]):
         if token == '':
             print('please set a token if you want to reg on Zenodo ')
-        self.token = token
+        else:
+            self.token = token
 
         if path_info != '':
             self.data = json.load(open(path_info, 'r'))
         else:
             self.data = dict()
 
-        if path_root != '':
-            self.path_root = path_root
+        self.path_root = path_root
+        self.sub_set = sub_set
+        self.path_arc = path_arc
+        return
 
     def set_token(self, token):
         self.token = token
@@ -37,6 +33,9 @@ class exonodo:
     def set_path_info(self, path_info):
         self.path_info = path_info
 
+    def set_sub_set(self, sub_set):
+        self.set_sub_set = sub_set
+        
     def register(self):
         zenodo_sup.molecule_display(data=self.data, flag=True)
         txt_tmp = 'The dataset of printed molecules will be registered \n' + \
@@ -46,23 +45,79 @@ class exonodo:
                 data=self.data, token=self.token, path_root=self.path_root)
         else:
             print('registration abolished')
+    
+    def archive(self):
+        exomol_arc.get_data_main(subset=self.sub_set, path_save=self.path_arc)
 
     def del_unpublished(self, ids: Union[str, list] = 'all'):
         zenodo_sup.zenodo_del_unpublished(token=self.token, ids=ids)
 
+    def run_config(self, path_config):
+        config = json.load(open(path_config, 'r'))
+        if config['option'] == 'reg':
+            xx = exonodo(token=config['token'],
+                        path_info=config['path_arc'],
+                        path_root=config['path_data'])
+            xx.del_unpublished()
+            xx.register()
+            return
+        elif config['option'] == 'arc':
+            xx = exonodo(sub_set=config['sub_set'],
+                        path_arc=config['path_arc'])
+            xx.archive()
+            return
+        return
+def process():
+    """ 
+    Function called when inputs are given from the command-line interface
+    """
+    parser = ArgumentParser(description="* show the condition when the arguments is complusory")
+    parser.print_help()
+    parser.add_argument('--config', help='path of configuration file')
+    parser.add_argument('--option', help='arc for collection; reg for registration')
+    parser.add_argument('--token', help='token of Zenodo <str>, * if option == reg')
+    parser.add_argument('--sub_set', help='subset of archived data; optional if option == arc')
+    parser.add_argument('--path_arc', help='path to save archive .json; * if option == arc or reg')
+    parser.add_argument('--path_data', help='path of exomol database; * if option == reg')
+    args = parser.parse_args()
+    
+    args_dict = vars(args)
+    if args_dict.get('config'):
+        # config = json.load(open(args.config, 'r'))
+        # if 'option' in config:
+        #     args.option = config['option']
+        # if 'token' in config:
+        #     args.token = config['token']
+        # if 'path_arc' in config:
+        #     args.path_arc = config['path_arc']
+        # if 'path_data' in config:
+        #     args.path_data = config['path_data']
+        # if 'sub_set' in config:
+        #     args.sub_set = config['sub_set']
+        xx = exonodo().run_config(args.config)
+
+    if args.option == 'reg':
+        xx = exonodo(token=args.token,
+                    path_info=args.path_arc,
+                    path_root=args.path_data)
+        xx.del_unpublished()
+        xx.register()
+        return
+    elif args.option == 'arc':
+        xx = exonodo(sub_set=args.sub_set,
+                    path_arc=args.path_arc)
+        xx.archive()
+        return
+    return
+
+
 if __name__ == '__main__':
-    xx = exonodo(token='87EdGUa0eTuaYZMkc4PFrZnlyQrTDc3Eq2LnQKgXhyHs2UfhjHygqC3nH5YL',
-                 path_info='../archive/data_26Al1H.json',
-                 path_root='../sample_data/mnt/data/exomol/exomol3_data/')
+    # xx = exonodo(token='87EdGUa0eTuaYZMkc4PFrZnlyQrTDc3Eq2LnQKgXhyHs2UfhjHygqC3nH5YL',
+    #              path_info='../archive/data_26Al1H.json',
+    #              path_root='../sample_data/mnt/data/exomol/exomol3_data/')
 
-    xx.del_unpublished()
-    xx.register()
+    # xx.del_unpublished()
+    # xx.register()
 
-# token = 'Mitwo0cwfer47Lvx51CTawELNJt9OYknMfP5WOvmNvJcYspgo9dGYDQiEFlL'
-# data = json.load(open('../Archive/data_AlH.json', 'r'))
+    process()
 
-# path_root = '../sample_data/mnt/data/exomol/exomol3_data/'
-# # isotope = '26Al1H'
-# # folder = data[isotope]
-# # db = find_recommend(folder)
-# zenodo_reg(data=data, token=info['token'], path_root=path_root)

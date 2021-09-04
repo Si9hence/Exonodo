@@ -19,7 +19,7 @@ def find_recommend(data: dict):
         if isinstance(data[item], dict):
             if data[item]['recommended']:
                 res.append(item)
-    
+
     if len(res) > 0:
         if find_prime(res):
             return find_prime(res)
@@ -96,7 +96,7 @@ def zenodo_decoder(data: dict, *,
             res['description'] += 'Definitions file:<br>%s<br>' % file_name
             res['description'] += reference_ExoMol
         else:
-            
+
             res['description'] += '<br>{title}<br>{des}:<br>'.format(
                 title=item, des=data[item]['description'])
             for cnt, file in enumerate(data[item]['files']):
@@ -132,21 +132,21 @@ def zenodo_ini(token: str):
     return r
 
 
-def zenodo_fill(*, deposit_id: str, metadata: dict, token: str):
+def zenodo_fill(*, deposit_id: str, metadata: dict, token: str, db: str, isotope=str):
     url = 'https://zenodo.org/api/deposit/depositions/%s' % deposit_id
     r = requests.put(url,
                      params={'access_token': token},
                      data=json.dumps(metadata),
                      headers={"Content-Type": "application/json"})
     if r.status_code == 200:
-        print('deposition id:{deposit_id} auto filling is successful'.format(
-            deposit_id=deposit_id))
+        print('The {db} dataset for {isotope}, deposition id:{deposit_id} filling is successful'.format(
+            db=db, isotope=isotope, deposit_id=deposit_id))
     else:
         print('response code:{response}, something wrong filling'.format(
             response=r.status_code))
 
 
-def zenodo_upload(*, deposit_id: str, bucket_url: str, files: list, path_root: str = '', token: str):
+def zenodo_upload(*, deposit_id: str, bucket_url: str, files: list, path_root: str = '', token: str, db: str, isotope=str):
     for file in files:
         file_name = file
         if path_root == '':
@@ -164,15 +164,15 @@ def zenodo_upload(*, deposit_id: str, bucket_url: str, files: list, path_root: s
             print(file_path + 'does not exist in the directory')
 
     if r.status_code == 200:
-        print('deposition id:{deposit_id} auto uploading is successful'.format(
-            deposit_id=deposit_id))
+        print('The {db} dataset for {isotope}, deposition id:{deposit_id} uploading is successful'.format(
+            db=db, isotope=isotope, deposit_id=deposit_id))
     else:
         print('response code:{response}, something wrong uploading'.format(
             response=r.status_code))
 
 
 def zenodo_metadata(*, data: dict, res: dict, db: str, isotope: str, path_file: str):
-    
+
     def search_version(path_def):
         info = csv.reader(open(path_def, 'r'))
         for item in info:
@@ -180,7 +180,7 @@ def zenodo_metadata(*, data: dict, res: dict, db: str, isotope: str, path_file: 
                 return item[0].split(' ')[0]
 
     def match_creators(res):
-    
+
         creators_info = {
             "Tennyson, J.": {"affiliation": "University College London",
                              "orcid": "0000-0002-4994-5238"},
@@ -212,13 +212,13 @@ def zenodo_metadata(*, data: dict, res: dict, db: str, isotope: str, path_file: 
             # creators.update(set(", ".join(item) for item in zip(tmp[0::2], tmp[1::2])))
         creators_meta = list()
         for creator in creators:
-            creators_meta.append({'name':creator})
+            creators_meta.append({'name': creator})
             if creator in creators_info:
                 creators_meta[-1].update(creators_info[creator])
             else:
                 pass
         return creators_meta
-    
+
     def match_keywords(data):
         keywords = ["ExoMol"]
         for key in data['data']:
@@ -236,11 +236,12 @@ def zenodo_metadata(*, data: dict, res: dict, db: str, isotope: str, path_file: 
             if 'opacity' in key:
                 grants += [{"id": "10.13039/501100000780::776403"}]
             elif 'line list' or 'partition function' in key:
-                grants += [{"id": "10.13039/501100000780::883830"}, {"id": "267219"}, {"id": "10.13039/501100000690::ST/R000476/1"}]
+                grants += [{"id": "10.13039/501100000780::883830"},
+                           {"id": "267219"}, {"id": "10.13039/501100000690::ST/R000476/1"}]
         return grants
     path_def = '/'.join([path_file,
                          [item for item in res['files'] if '.def' in item][0]])
-    
+
     version = search_version(path_def)
     creators = match_creators(res)
     publication_date = '-'.join([version[0:4], version[4:6], version[6::]])
@@ -278,7 +279,8 @@ def zenodo_main(data: dict, *, token: str = '', path_root: str):
                 isot = data[cat][molecule][isotope]
                 db = find_recommend(isot)
                 if db is False:
-                    print('no recommended db found, {isotope}skipped'.format(isotope=isotope))
+                    print('no recommended db found, {isotope}skipped'.format(
+                        isotope=isotope))
                 path_file = path_root + \
                     '/'.join(isot[db]['url'].split('/')[-3::])
 
@@ -292,9 +294,9 @@ def zenodo_main(data: dict, *, token: str = '', path_root: str):
                     data=isot[db], res=res, db=db, isotope=isotope, path_file=path_file)
 
                 zenodo_fill(deposit_id=deposit_id,
-                            metadata=metadata, token=token)
+                            metadata=metadata, token=token, db=db, isotope=isotope)
                 zenodo_upload(deposit_id=deposit_id, bucket_url=bucket_url,
-                              files=res['files'], path_root=path_file, token=token)
+                              files=res['files'], path_root=path_file, token=token, db=db, isotope=isotope)
 
 
 if __name__ == '__main__':
@@ -311,5 +313,6 @@ if __name__ == '__main__':
 
     info = json.load(open('../Archive/data_26Al1H.json', 'r'))
     res = zenodo_decoder(data)
-    md = zenodo_metadata(data=data, res=res, db=db, isotope=isotope, path_file=pf)
+    md = zenodo_metadata(data=data, res=res, db=db,
+                         isotope=isotope, path_file=pf)
     # zenodo_main(data=info, token=ACCESS_TOKEN, path_root=path_root)
