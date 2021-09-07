@@ -4,7 +4,7 @@ import json
 from typing import Union
 from time import sleep
 from pprint import pprint
-import zenodo_reg
+from . import zenodo_reg
 # from requests import status_codes
 # from requests_html import HTMLSession
 

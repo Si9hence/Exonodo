@@ -1,7 +1,8 @@
 from os import path
-import zenodo_reg
-import exomol_arc
-import zenodo_sup
+
+from . import zenodo_reg
+from . import exomol_arc
+from . import zenodo_sup
 import json
 from typing import Union
 from argparse import ArgumentParser
@@ -9,16 +10,13 @@ from argparse import ArgumentParser
 class exonodo:
 
     def __init__(self, *, token='', path_info='', path_root='', path_arc='', sub_set=[]):
-        if token == '':
-            print('please set a token if you want to reg on Zenodo ')
-        else:
-            self.token = token
 
         if path_info != '':
             self.data = json.load(open(path_info, 'r'))
         else:
             self.data = dict()
-
+            
+        self.token = token
         self.path_root = path_root
         self.sub_set = sub_set
         self.path_arc = path_arc
