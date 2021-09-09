@@ -61,7 +61,7 @@ to call to load and run the configuration file.
 
 # Demo
 
-There are three demo has been supplied to show the main usage of the program: 
+Three demo has been supplied to show the main usage of the program: 
 
 >**Collection(integrated with validation)**  
 >./sample/collection_demo.ipynb
