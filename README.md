@@ -16,7 +16,7 @@ Then Exonodo could be called as a normal package, there are two demos **collecti
 
 # Composition
 Functions has been split into 5 python files associated different features. They are stord in the folder ./Exonodo.
->**exomol_arc.py**: Collection 
+>**exomol_arc.py**: Collection  
 >**exomol_val.py**: Validation  
 >**zenodo_reg.py**: Registration  
 >**exonodo.py**: command line interface  
