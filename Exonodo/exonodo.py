@@ -1,15 +1,20 @@
-from os import path
+# to be compatible with package install and normal calling
+try:
+    from . import zenodo_reg
+    from . import exomol_arc
+    from . import zenodo_sup
+except:
+    import zenodo_reg
+    import exomol_arc
+    import zenodo_sup
 
-from . import zenodo_reg
-from . import exomol_arc
-from . import zenodo_sup
 import json
 from typing import Union
 from argparse import ArgumentParser
 
 class exonodo:
 
-    def __init__(self, *, token='', path_info='', path_root='', path_arc='', sub_set=[]):
+    def __init__(self, *, token='', path_info='', path_root='', path_arc='', sub_set=[], config =''):
 
         if path_info != '':
             self.data = json.load(open(path_info, 'r'))
@@ -20,7 +25,11 @@ class exonodo:
         self.path_root = path_root
         self.sub_set = sub_set
         self.path_arc = path_arc
+        
+        if config:
+            self.run_config(config)
         return
+
 
     def set_token(self, token):
         self.token = token
@@ -35,9 +44,10 @@ class exonodo:
         self.set_sub_set = sub_set
         
     def register(self):
+        # display molecules for registration
         zenodo_sup.molecule_display(data=self.data, flag=True)
         txt_tmp = 'The dataset of printed molecules will be registered \n' + \
-            'press y to confirm'
+            'press y to confirm \n'
         if input(txt_tmp) == 'y':
             zenodo_reg.zenodo_main(
                 data=self.data, token=self.token, path_root=self.path_root)
@@ -65,11 +75,18 @@ class exonodo:
             xx.archive()
             return
         return
+
+def load_config(config:str):
+    exonodo(config=config)
+
 def process():
     """ 
     Function called when inputs are given from the command-line interface
     """
-    parser = ArgumentParser(description="* show the condition when the arguments is complusory")
+    parser = ArgumentParser(description="""The --config method is recommended \n
+                            users are allowed to input option, token, sub_set, path_arc, path_data\n
+                            for single calling\n
+                            * show the condition when the arguments is complusory""")
     parser.print_help()
     parser.add_argument('--config', help='path of configuration file')
     parser.add_argument('--option', help='arc for collection; reg for registration')
@@ -93,7 +110,7 @@ def process():
         # if 'sub_set' in config:
         #     args.sub_set = config['sub_set']
         xx = exonodo().run_config(args.config)
-
+        return 
     if args.option == 'reg':
         xx = exonodo(token=args.token,
                     path_info=args.path_arc,

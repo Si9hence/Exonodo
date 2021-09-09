@@ -6,8 +6,12 @@ import csv
 
 
 def find_recommend(data: dict):
-
+    """
+    The function find the recommended dataset for each isotopologue
+    """
     def find_prime(res):
+        # prime contains the datasets which are recommended if multiple
+        # recommended are found
         prime = ['MoLLIST']
         for db in res:
             if db in prime:
@@ -30,6 +34,10 @@ def find_recommend(data: dict):
 
 
 def remove_skipped_data(data: dict, *, skips: list = ['Spectroscopic', 'Spectrum overview']):
+    """
+    The function drops the data from json archive by a skips list
+    in this case Spectroscopic and spectrum overview has been skipped
+    """
     tmp = []
 
     for skip in skips:
@@ -45,6 +53,10 @@ def remove_skipped_data(data: dict, *, skips: list = ['Spectroscopic', 'Spectrum
 
 def keep_kept_data(data: dict, *,
                    keeps: list = ['Definitions file', 'line list', 'partition function', 'opacity']):
+    """
+    The function keeps the data from json archive by a keeps list and drops the rest properties
+    in this case ['Definitions file', 'line list', 'partition function', 'opacity'] has been dropped
+    """
     tmp = []
     for keep in keeps:
         for item in data:
@@ -70,12 +82,17 @@ def zenodo_decoder(data: dict, *,
         data: dict()
             in root[molecule type][molecule][isotope][database][data]
         skips: [str] or []
+        keeps: [str] or []
+    
+    The function accepts an data input and removes and keeps selected properties.
+    Then a description of the archive file will then be generated.
     """
     url = data['url']
     data = data['data']
 
     def insert_space(n=1):
         return '&nbsp;'*n
+    
     # set.intersection could not be used here as the keys in skips
     # may be a subset of the keys in data
     data = remove_skipped_data(data, skips=skips)
@@ -117,6 +134,12 @@ def zenodo_decoder(data: dict, *,
 
 
 def zenodo_ini(token: str):
+    """
+    token: str
+    
+    The function accepts token and creates an empty bucket for registration
+    """
+    
     headers = {"Content-Type": "application/json"}
     params = {'access_token': token}
 
@@ -133,11 +156,17 @@ def zenodo_ini(token: str):
 
 
 def zenodo_fill(*, deposit_id: str, metadata: dict, token: str, db: str, isotope=str):
+    """
+    The function uploads the metadata to fill keywords on Zenodo registration page
+    """
+    
     url = 'https://zenodo.org/api/deposit/depositions/%s' % deposit_id
     r = requests.put(url,
                      params={'access_token': token},
                      data=json.dumps(metadata),
                      headers={"Content-Type": "application/json"})
+    
+    # return message if upload successful or failed
     if r.status_code == 200:
         print('The {db} dataset for {isotope}, deposition id:{deposit_id} filling is successful'.format(
             db=db, isotope=isotope, deposit_id=deposit_id))
@@ -147,6 +176,13 @@ def zenodo_fill(*, deposit_id: str, metadata: dict, token: str, db: str, isotope
 
 
 def zenodo_upload(*, deposit_id: str, bucket_url: str, files: list, path_root: str = '', token: str, db: str, isotope=str):
+    """
+    bucket_url: the bucket id offered by Zenodo after creating a registration and for uploading files
+    files: [file names]
+    path_root: path of the database, usually default on ExoMol
+    The function uploads relevant files via a files list to the Zenodo registration
+    """
+
     for file in files:
         file_name = file
         if path_root == '':
@@ -172,15 +208,28 @@ def zenodo_upload(*, deposit_id: str, bucket_url: str, files: list, path_root: s
 
 
 def zenodo_metadata(*, data: dict, res: dict, db: str, isotope: str, path_file: str):
+    """
+    This function prepares metadata for the Zenodo reistration, including
+    version matching
+    creator matching
+    grants matching
+    keywords matching
+    """
 
     def search_version(path_def):
+        # loads version information from the database
+
         info = csv.reader(open(path_def, 'r'))
         for item in info:
             if 'Version number' in item[0]:
                 return item[0].split(' ')[0]
 
     def match_creators(res):
-
+        """
+        split the authors of references by first occurance
+        the author information will be matched from creators_info
+        which is collected from ORCID organization
+        """
         creators_info = {
             "Tennyson, J.": {"affiliation": "University College London",
                              "orcid": "0000-0002-4994-5238"},
@@ -220,6 +269,8 @@ def zenodo_metadata(*, data: dict, res: dict, db: str, isotope: str, path_file: 
         return creators_meta
 
     def match_keywords(data):
+        # match keywords by the files included in dataset
+
         keywords = ["ExoMol"]
         for key in data['data']:
             if 'opacity' in key:
@@ -231,6 +282,7 @@ def zenodo_metadata(*, data: dict, res: dict, db: str, isotope: str, path_file: 
         return keywords
 
     def match_grants(data):
+        # match keywords by the files included in dataset
         grants = []
         for key in data['data']:
             if 'opacity' in key:
@@ -249,6 +301,8 @@ def zenodo_metadata(*, data: dict, res: dict, db: str, isotope: str, path_file: 
     grants = match_grants(data)
     references = list(res['reference'])
     description = res['description']
+    
+    # insert the prepared information of a metadata format
     metadata = {
         'metadata': {
             'title': 'The {db} dataset for {isotope}'.format(db=db, isotope=isotope),
@@ -270,28 +324,36 @@ def zenodo_metadata(*, data: dict, res: dict, db: str, isotope: str, path_file: 
 
 
 def zenodo_main(data: dict, *, token: str = '', path_root: str):
+    """
+    data: archived json data
+    token: Zenodo authorization token
+    path_root: the
+    The main function of registration process.
+    """
+    
+    # traverse the archive json data: molecule, isotope, database 
     for cat in data:
         for molecule in data[cat]:
             for isotope in data[cat][molecule]:
                 if isinstance(data[cat][molecule][isotope], str):
                     continue
 
-                isot = data[cat][molecule][isotope]
-                db = find_recommend(isot)
+                isotope_data = data[cat][molecule][isotope]
+                db = find_recommend(isotope_data)
                 if db is False:
                     print('no recommended db found, {isotope}skipped'.format(
                         isotope=isotope))
                 path_file = path_root + \
-                    '/'.join(isot[db]['url'].split('/')[-3::])
+                    '/'.join(isotope_data[db]['url'].split('/')[-3::])
 
-                res = zenodo_decoder(data=isot[db],
+                res = zenodo_decoder(data=isotope_data[db],
                                      skips=['Spectroscopic', 'Spectrum overview'])
                 r = zenodo_ini(token=token)
                 bucket_url = r.json()["links"]["bucket"]
                 deposit_id = r.json()['id']
                 # tbc
                 metadata = zenodo_metadata(
-                    data=isot[db], res=res, db=db, isotope=isotope, path_file=path_file)
+                    data=isotope_data[db], res=res, db=db, isotope=isotope, path_file=path_file)
 
                 zenodo_fill(deposit_id=deposit_id,
                             metadata=metadata, token=token, db=db, isotope=isotope)
