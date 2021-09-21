@@ -206,30 +206,36 @@ def get_data_main(*, subset={'cat':[]}, path_save='./', valid = True):
         data_validation(path_save)
     return res
 
-
+def get_data_raw(url):
+    return
 if __name__ == '__main__':
-    # url = 'https://exomol.com/data/molecules/'
-    # res = get_molecule(url)
-    # cat = 'metal hydrides'
-    # molecule = 'AlH'
-    # for cat in res:
-    #     for molecule in res[cat]:
-    #         url = res[cat][molecule]['url']
-    #         res[cat][molecule].update(get_isotope(url))
-    #         sleep(4)
-    #         for isotope in res[cat][molecule]:
-    #             if isinstance(res[cat][molecule][isotope], dict):
-    #                 url = res[cat][molecule][isotope]['url']
-    #                 res[cat][molecule][isotope].update(get_dataset(url))
-    #                 print(isotope)
-    #                 sleep(4)
-    #                 for dataset in res[cat][molecule][isotope]:
-    #                     if isinstance(res[cat][molecule][isotope][dataset], dict):
-    #                         url = res[cat][molecule][isotope][dataset]['url']
-    #                         res[cat][molecule][isotope][dataset]['data'] = get_data(url)
-    #                         sleep(4)
-    #                         print(dataset)
 
+    url = 'https://exomol.com/data/molecules/'
+    res = get_molecule(url)
+    cat = 'metal hydrides'
+    molecule = 'AlH'
+    for cat in res:
+        for molecule in res[cat]:
+            url = res[cat][molecule]['url']
+            res[cat][molecule].update(get_isotope(url))
+            sleep(4)
+            for isotope in res[cat][molecule]:
+                if isinstance(res[cat][molecule][isotope], dict):
+                    url = res[cat][molecule][isotope]['url']
+                    res[cat][molecule][isotope].update(get_dataset(url))
+                    print(isotope)
+                    sleep(4)
+                    for dataset in res[cat][molecule][isotope]:
+                        if isinstance(res[cat][molecule][isotope][dataset], dict):
+                            url = res[cat][molecule][isotope][dataset]['url']
+                            res[cat][molecule][isotope][dataset]['data'] = get_data(url)
+                            sleep(4)
+                            print(dataset)
+    # r=HTMLSession().get("https://exomol.com/data/molecules/AlH/26Al-1H/AlHambra/")
+    # aa = r.html.find(selector='div.col-md-10')[0].raw_html
+    # f = open('../Archive/test.html','wb')
+    # f.write(aa)
+    # f.close()
     # with open('../Archive/data_all.json','w') as f:
     #     json.dump(res, f)
     # get_data_main(subset={'cat':['metal hydrides']}, path_save='../Archive/')

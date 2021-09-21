@@ -14,7 +14,7 @@ from argparse import ArgumentParser
 
 class exonodo:
 
-    def __init__(self, *, token='', path_info='', path_root='', path_arc='', sub_set=[], config =''):
+    def __init__(self, *, token='', path_info='', path_root='', path_arc='', sub_set=[], config ='', field=[]):
 
         if path_info != '':
             self.data = json.load(open(path_info, 'r'))
@@ -25,7 +25,7 @@ class exonodo:
         self.path_root = path_root
         self.sub_set = sub_set
         self.path_arc = path_arc
-        
+        self.field = field
         if config:
             self.run_config(config)
         return
@@ -50,7 +50,7 @@ class exonodo:
             'press y to confirm \n'
         if input(txt_tmp) == 'y':
             zenodo_reg.zenodo_main(
-                data=self.data, token=self.token, path_root=self.path_root)
+                data=self.data, token=self.token, path_root=self.path_root, field=self.field)
         else:
             print('registration abolished')
     
@@ -65,7 +65,8 @@ class exonodo:
         if config['option'] == 'reg':
             xx = exonodo(token=config['token'],
                         path_info=config['path_arc'],
-                        path_root=config['path_data'])
+                        path_root=config['path_data'],
+                        field=config['field'])
             xx.del_unpublished()
             xx.register()
             return
@@ -133,6 +134,9 @@ if __name__ == '__main__':
 
     # xx.del_unpublished()
     # xx.register()
-
-    process()
+    load_config('../sample/config_reg_mo.json')
+    # try:
+    #     process()
+    # except:
+    #     pass
 

@@ -1,0 +1,1922 @@
+{
+    "metal oxides": {
+        "AlO": {
+            "url": "https://exomol.com/data/molecules/AlO",
+            "26Al16O": {
+                "url": "https://exomol.com/data/molecules/AlO/26Al-16O",
+                "ATP": {
+                    "url": "https://exomol.com/data/molecules/AlO/26Al-16O/ATP",
+                    "recommended": true,
+                    "data": {
+                        "Definitions file": {
+                            "url": "https://exomol.com/db/AlO/26Al-16O/ATP/26Al-16O__ATP.def"
+                        },
+                        "Spectroscopic Model": {
+                            "url": "https://exomol.com/models/AlO/26Al-16O/ATP/"
+                        },
+                        "ATP: line list": {
+                            "description": "Line lists for four isotopes of aluminium monoxide covering the pure rotation, rotation\u2013vibration and electronic (B \u2212 X blue\u2013green and A \u2212 X infrared bands) spectrum. States file updated 20-11-2015.",
+                            "references": [
+                                "Patrascu, A. T., Yurchenko, S. N., Tennyson, J., \"ExoMol molecular line lists: IX The spectrum of AlO\", Monthly Notices of the Royal Astronomical Society 449, 3613-3619 (2015). [http://dx.doi.org/10.1093/mnras/stv507][15PaYuTe.AlO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "ATP_README.txt",
+                                    "description": "Documentation for the AlO line list of the ATP dataset",
+                                    "url": "https://exomol.com/db/AlO/ATP_README.txt"
+                                },
+                                {
+                                    "file_name": "26Al-16O__ATP.states.bz2",
+                                    "description": "Labelled rovibrational states of (26Al)(16O). Some calculated (Ca) energy levels were replaced with Pseudo-experimental correction (PE) values.",
+                                    "url": "https://exomol.com/db/AlO/26Al-16O/ATP/26Al-16O__ATP.states.bz2"
+                                },
+                                {
+                                    "file_name": "26Al-16O__ATP.trans.bz2",
+                                    "description": "Frequency ordered transitions of (26Al)(16O)",
+                                    "url": "https://exomol.com/db/AlO/26Al-16O/ATP/26Al-16O__ATP.trans.bz2"
+                                }
+                            ]
+                        },
+                        "ATP: partition function": {
+                            "description": "Line lists for four isotopes of aluminium monoxide covering the pure rotation, rotation\u2013vibration and electronic (B \u2212 X blue\u2013green and A \u2212 X infrared bands) spectrum. States file updated 20-11-2015.",
+                            "references": [
+                                "Patrascu, A. T., Yurchenko, S. N., Tennyson, J., \"ExoMol molecular line lists: IX The spectrum of AlO\", Monthly Notices of the Royal Astronomical Society 449, 3613-3619 (2015). [http://dx.doi.org/10.1093/mnras/stv507][15PaYuTe.AlO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "ATP_README.txt",
+                                    "description": "Documentation for the AlO line list of the ATP dataset",
+                                    "url": "https://exomol.com/db/AlO/ATP_README.txt"
+                                },
+                                {
+                                    "file_name": "26Al-16O__ATP.pf",
+                                    "description": "Partition function for (26Al)(16O)",
+                                    "url": "https://exomol.com/db/AlO/26Al-16O/ATP/26Al-16O__ATP.pf"
+                                }
+                            ]
+                        },
+                        "ATP: opacity": {
+                            "description": "Line lists for four isotopes of aluminium monoxide covering the pure rotation, rotation\u2013vibration and electronic (B \u2212 X blue\u2013green and A \u2212 X infrared bands) spectrum. States file updated 20-11-2015.",
+                            "references": [
+                                "Patrascu, A. T., Yurchenko, S. N., Tennyson, J., \"ExoMol molecular line lists: IX The spectrum of AlO\", Monthly Notices of the Royal Astronomical Society 449, 3613-3619 (2015). [http://dx.doi.org/10.1093/mnras/stv507][15PaYuTe.AlO]",
+                                "Chubb, K. L., Rocchetto, M., Yurchenko, S. N., Min, M., Waldmann, I., Barstow, J. K., Molliere, P., Al-Refaie, A. F, Phillips, M. W., Tennyson, J., \"The ExoMolOP database: Cross sections and k-tables for molecules of interest in high-temperature exoplanet atmospheres\", Astronomy and Astrophysics 646, A21 (2020). [http://dx.doi.org/10.1051/0004-6361/202038350][20ChRoYu.]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "27Al-16O__ATP.R1000_0.3-50mu.ktable.ARCiS.fits.gz",
+                                    "description": "ARCiS k-tables at R= 1000 (0.3-50mu) in fits format (gzipped): ATP (27Al)(16O) line list.",
+                                    "url": "https://exomol.com/db/AlO/27Al-16O/ATP/27Al-16O__ATP.R1000_0.3-50mu.ktable.ARCiS.fits.gz"
+                                },
+                                {
+                                    "file_name": "27Al-16O__ATP.R1000_0.3-50mu.ktable.petitRADTRANS.h5",
+                                    "description": "petitRADTRANS k-tables at R= 1000 (0.3-50mu) in HDF5 format: ATP (27Al)(16O) line list.",
+                                    "url": "https://exomol.com/db/AlO/27Al-16O/ATP/27Al-16O__ATP.R1000_0.3-50mu.ktable.petitRADTRANS.h5"
+                                },
+                                {
+                                    "file_name": "27Al-16O__ATP.R1000_0.3-50mu.ktable.NEMESIS.kta",
+                                    "description": "NEMESIS k-tables at R= 1000 (0.3-50mu) in NEMESIS-kta format: ATP (27Al)(16O) line list.",
+                                    "url": "https://exomol.com/db/AlO/27Al-16O/ATP/27Al-16O__ATP.R1000_0.3-50mu.ktable.NEMESIS.kta"
+                                },
+                                {
+                                    "file_name": "27Al-16O__ATP.R15000_0.3-50mu.xsec.TauREx.h5",
+                                    "description": "TauREx k-tables at R= 15000 (0.3-50mu) in HDF5 format: ATP (27Al)(16O) line list.",
+                                    "url": "https://exomol.com/db/AlO/27Al-16O/ATP/27Al-16O__ATP.R15000_0.3-50mu.xsec.TauREx.h5"
+                                }
+                            ]
+                        },
+                        "ATP: other States files": {
+                            "description": "Line lists for four isotopes of aluminium monoxide covering the pure rotation, rotation\u2013vibration and electronic (B \u2212 X blue\u2013green and A \u2212 X infrared bands) spectrum. States file updated 20-11-2015.",
+                            "references": [
+                                "Patrascu, A. T., Yurchenko, S. N., Tennyson, J., \"ExoMol molecular line lists: IX The spectrum of AlO\", Monthly Notices of the Royal Astronomical Society 449, 3613-3619 (2015). [http://dx.doi.org/10.1093/mnras/stv507][15PaYuTe.AlO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "ATP_README.txt",
+                                    "description": "Documentation for the AlO line list of the ATP dataset",
+                                    "url": "https://exomol.com/db/AlO/ATP_README.txt"
+                                },
+                                {
+                                    "file_name": "26Al-16O__ATP_v1.states.bz2",
+                                    "description": "Labelled rovibrational states of (26Al)(16O): Original version of the States file",
+                                    "url": "https://exomol.com/db/AlO/26Al-16O/ATP/26Al-16O__ATP_v1.states.bz2"
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            "27Al16O": {
+                "url": "https://exomol.com/data/molecules/AlO/27Al-16O",
+                "ATP": {
+                    "url": "https://exomol.com/data/molecules/AlO/27Al-16O/ATP",
+                    "recommended": true,
+                    "data": {
+                        "Definitions file": {
+                            "url": "https://exomol.com/db/AlO/27Al-16O/ATP/27Al-16O__ATP.def"
+                        },
+                        "Spectroscopic Model": {
+                            "url": "https://exomol.com/models/AlO/27Al-16O/ATP/"
+                        },
+                        "Spectrum overview": {
+                            "url": "/media/uploads/spectrum-images/27Al-16O__ATP__spectrum.png"
+                        },
+                        "ATP: line list": {
+                            "description": "Line lists for four isotopes of aluminium monoxide covering the pure rotation, rotation\u2013vibration and electronic (B \u2212 X blue\u2013green and A \u2212 X infrared bands) spectrum. States file updated 20-11-2015.",
+                            "references": [
+                                "Patrascu, A. T., Yurchenko, S. N., Tennyson, J., \"ExoMol molecular line lists: IX The spectrum of AlO\", Monthly Notices of the Royal Astronomical Society 449, 3613-3619 (2015). [http://dx.doi.org/10.1093/mnras/stv507][15PaYuTe.AlO]",
+                                "Bowesman, C. A., Shuai, M., Yurchenko, S. N., Tennyson, J., \"A high resolution line list for AlO\", Monthly Notices of the Royal Astronomical Society Submitted (2021)."
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "ATP_README.txt",
+                                    "description": "Documentation for the AlO line list of the ATP dataset",
+                                    "url": "https://exomol.com/db/AlO/ATP_README.txt"
+                                },
+                                {
+                                    "file_name": "27Al-16O__ATP.states.bz2",
+                                    "description": "Labelled rovibrational states of (27Al)(16O). Many calculated (Ca) energy levels were replaced with Marvelised (Ma), Effective Hamiltonian (EH), Predicted shift (PS) and Pseudo-experimental correction (PE) values.",
+                                    "url": "https://exomol.com/db/AlO/27Al-16O/ATP/27Al-16O__ATP.states.bz2"
+                                },
+                                {
+                                    "file_name": "27Al-16O__ATP.trans.bz2",
+                                    "description": "Frequency ordered transitions of (27Al)(16O)",
+                                    "url": "https://exomol.com/db/AlO/27Al-16O/ATP/27Al-16O__ATP.trans.bz2"
+                                }
+                            ]
+                        },
+                        "ATP: partition function": {
+                            "description": "Line lists for four isotopes of aluminium monoxide covering the pure rotation, rotation\u2013vibration and electronic (B \u2212 X blue\u2013green and A \u2212 X infrared bands) spectrum. States file updated 20-11-2015.",
+                            "references": [
+                                "Patrascu, A. T., Yurchenko, S. N., Tennyson, J., \"ExoMol molecular line lists: IX The spectrum of AlO\", Monthly Notices of the Royal Astronomical Society 449, 3613-3619 (2015). [http://dx.doi.org/10.1093/mnras/stv507][15PaYuTe.AlO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "ATP_README.txt",
+                                    "description": "Documentation for the AlO line list of the ATP dataset",
+                                    "url": "https://exomol.com/db/AlO/ATP_README.txt"
+                                },
+                                {
+                                    "file_name": "27Al-16O__ATP.pf",
+                                    "description": "Partition function for (27Al)(16O)",
+                                    "url": "https://exomol.com/db/AlO/27Al-16O/ATP/27Al-16O__ATP.pf"
+                                }
+                            ]
+                        },
+                        "ATP: other States files": {
+                            "description": "Line lists for four isotopes of aluminium monoxide covering the pure rotation, rotation\u2013vibration and electronic (B \u2212 X blue\u2013green and A \u2212 X infrared bands) spectrum. States file updated 20-11-2015.",
+                            "references": [
+                                "Patrascu, A. T., Yurchenko, S. N., Tennyson, J., \"ExoMol molecular line lists: IX The spectrum of AlO\", Monthly Notices of the Royal Astronomical Society 449, 3613-3619 (2015). [http://dx.doi.org/10.1093/mnras/stv507][15PaYuTe.AlO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "ATP_README.txt",
+                                    "description": "Documentation for the AlO line list of the ATP dataset",
+                                    "url": "https://exomol.com/db/AlO/ATP_README.txt"
+                                },
+                                {
+                                    "file_name": "27Al-16O__ATP_v1.states.bz2",
+                                    "description": "Labelled rovibrational states of (27Al)(16O): Original version of the States file",
+                                    "url": "https://exomol.com/db/AlO/27Al-16O/ATP/27Al-16O__ATP_v1.states.bz2"
+                                }
+                            ]
+                        },
+                        "ATP: opacity": {
+                            "description": "Line lists for four isotopes of aluminium monoxide covering the pure rotation, rotation\u2013vibration and electronic (B \u2212 X blue\u2013green and A \u2212 X infrared bands) spectrum. States file updated 20-11-2015.",
+                            "references": [
+                                "Patrascu, A. T., Yurchenko, S. N., Tennyson, J., \"ExoMol molecular line lists: IX The spectrum of AlO\", Monthly Notices of the Royal Astronomical Society 449, 3613-3619 (2015). [http://dx.doi.org/10.1093/mnras/stv507][15PaYuTe.AlO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "27Al-16O__ATP.R1000_0.3-50mu.ktable.ARCiS.fits.gz",
+                                    "description": "ARCiS k-tables at R= 1000 (0.3-50mu) in fits format (gzipped): ATP (27Al)(16O) line list.",
+                                    "url": "https://exomol.com/db/AlO/27Al-16O/ATP/27Al-16O__ATP.R1000_0.3-50mu.ktable.ARCiS.fits.gz"
+                                },
+                                {
+                                    "file_name": "27Al-16O__ATP.R1000_0.3-50mu.ktable.petitRADTRANS.h5",
+                                    "description": "petitRADTRANS k-tables at R= 1000 (0.3-50mu) in HDF5 format: ATP (27Al)(16O) line list.",
+                                    "url": "https://exomol.com/db/AlO/27Al-16O/ATP/27Al-16O__ATP.R1000_0.3-50mu.ktable.petitRADTRANS.h5"
+                                },
+                                {
+                                    "file_name": "27Al-16O__ATP.R1000_0.3-50mu.ktable.NEMESIS.kta",
+                                    "description": "NEMESIS k-tables at R= 1000 (0.3-50mu) in NEMESIS-kta format: ATP (27Al)(16O) line list.",
+                                    "url": "https://exomol.com/db/AlO/27Al-16O/ATP/27Al-16O__ATP.R1000_0.3-50mu.ktable.NEMESIS.kta"
+                                },
+                                {
+                                    "file_name": "27Al-16O__ATP.R15000_0.3-50mu.xsec.TauREx.h5",
+                                    "description": "TauREx k-tables at R= 15000 (0.3-50mu) in HDF5 format: ATP (27Al)(16O) line list.",
+                                    "url": "https://exomol.com/db/AlO/27Al-16O/ATP/27Al-16O__ATP.R15000_0.3-50mu.xsec.TauREx.h5"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "xsec-ATP": {
+                    "url": "https://exomol.com/data/molecules/AlO/27Al-16O/xsec-ATP",
+                    "recommended": false,
+                    "data": {
+                        "xsec-ATP: cross section": {
+                            "description": "Online absorption cross section service: this AlO cross section has been generated from data in the ATP calculated line list for the ExoMol project [Tennyson and Yurchenko (2012)] using the procedure described in [Hill et al. (2013)].",
+                            "references": [
+                                "Patrascu, A. T., Yurchenko, S. N., Tennyson, J., \"ExoMol molecular line lists: IX The spectrum of AlO\", Monthly Notices of the Royal Astronomical Society 449, 3613-3619 (2015). [http://dx.doi.org/10.1093/mnras/stv507][15PaYuTe.AlO]",
+                                "Patrascu, A. T., Hill, C., Tennyson, J., Yurchenko, S. N., \"Study of the electronic and rovibronic structure of the X 2\u03a3+, A 2\u03a0 , and B 2\u03a3+ states of AlO\", Journal of Chemical Physics 141 (2014). [http://dx.doi.org/10.1063/1.4897484][14PaHiTe.AlO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "27Al-16O",
+                                    "description": "Absorption cross section service for AlO",
+                                    "url": "https://exomol.com/xsec/27Al-16O"
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            "27Al17O": {
+                "url": "https://exomol.com/data/molecules/AlO/27Al-17O",
+                "ATP": {
+                    "url": "https://exomol.com/data/molecules/AlO/27Al-17O/ATP",
+                    "recommended": true,
+                    "data": {
+                        "Definitions file": {
+                            "url": "https://exomol.com/db/AlO/27Al-17O/ATP/27Al-17O__ATP.def"
+                        },
+                        "Spectroscopic Model": {
+                            "url": "https://exomol.com/models/AlO/27Al-17O/ATP/"
+                        },
+                        "ATP: line list": {
+                            "description": "Line lists for four isotopes of aluminium monoxide covering the pure rotation, rotation\u2013vibration and electronic (B \u2212 X blue\u2013green and A \u2212 X infrared bands) spectrum. States file updated 20-11-2015.",
+                            "references": [
+                                "Patrascu, A. T., Yurchenko, S. N., Tennyson, J., \"ExoMol molecular line lists: IX The spectrum of AlO\", Monthly Notices of the Royal Astronomical Society 449, 3613-3619 (2015). [http://dx.doi.org/10.1093/mnras/stv507][15PaYuTe.AlO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "ATP_README.txt",
+                                    "description": "Documentation for the AlO line list of the ATP dataset",
+                                    "url": "https://exomol.com/db/AlO/ATP_README.txt"
+                                },
+                                {
+                                    "file_name": "27Al-17O__ATP.states.bz2",
+                                    "description": "Labelled rovibrational states of (27Al)(17O). Some calculated (Ca) energy levels were replaced with Pseudo-experimental correction (PE) values.",
+                                    "url": "https://exomol.com/db/AlO/27Al-17O/ATP/27Al-17O__ATP.states.bz2"
+                                },
+                                {
+                                    "file_name": "27Al-17O__ATP.trans.bz2",
+                                    "description": "Frequency ordered transitions of (27Al)(17O)",
+                                    "url": "https://exomol.com/db/AlO/27Al-17O/ATP/27Al-17O__ATP.trans.bz2"
+                                }
+                            ]
+                        },
+                        "ATP: partition function": {
+                            "description": "Line lists for four isotopes of aluminium monoxide covering the pure rotation, rotation\u2013vibration and electronic (B \u2212 X blue\u2013green and A \u2212 X infrared bands) spectrum. States file updated 20-11-2015.",
+                            "references": [
+                                "Patrascu, A. T., Yurchenko, S. N., Tennyson, J., \"ExoMol molecular line lists: IX The spectrum of AlO\", Monthly Notices of the Royal Astronomical Society 449, 3613-3619 (2015). [http://dx.doi.org/10.1093/mnras/stv507][15PaYuTe.AlO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "ATP_README.txt",
+                                    "description": "Documentation for the AlO line list of the ATP dataset",
+                                    "url": "https://exomol.com/db/AlO/ATP_README.txt"
+                                },
+                                {
+                                    "file_name": "27Al-17O__ATP.pf",
+                                    "description": "Partition function for (27Al)(17O)",
+                                    "url": "https://exomol.com/db/AlO/27Al-17O/ATP/27Al-17O__ATP.pf"
+                                }
+                            ]
+                        },
+                        "ATP: other States files": {
+                            "description": "Line lists for four isotopes of aluminium monoxide covering the pure rotation, rotation\u2013vibration and electronic (B \u2212 X blue\u2013green and A \u2212 X infrared bands) spectrum. States file updated 20-11-2015.",
+                            "references": [
+                                "Patrascu, A. T., Yurchenko, S. N., Tennyson, J., \"ExoMol molecular line lists: IX The spectrum of AlO\", Monthly Notices of the Royal Astronomical Society 449, 3613-3619 (2015). [http://dx.doi.org/10.1093/mnras/stv507][15PaYuTe.AlO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "ATP_README.txt",
+                                    "description": "Documentation for the AlO line list of the ATP dataset",
+                                    "url": "https://exomol.com/db/AlO/ATP_README.txt"
+                                },
+                                {
+                                    "file_name": "27Al-17O__ATP_v1.states.bz2",
+                                    "description": "Labelled rovibrational states of (27Al)(17O): Original version of the States file",
+                                    "url": "https://exomol.com/db/AlO/27Al-17O/ATP/27Al-17O__ATP_v1.states.bz2"
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            "27Al18O": {
+                "url": "https://exomol.com/data/molecules/AlO/27Al-18O",
+                "ATP": {
+                    "url": "https://exomol.com/data/molecules/AlO/27Al-18O/ATP",
+                    "recommended": true,
+                    "data": {
+                        "Definitions file": {
+                            "url": "https://exomol.com/db/AlO/27Al-18O/ATP/27Al-18O__ATP.def"
+                        },
+                        "Spectroscopic Model": {
+                            "url": "https://exomol.com/models/AlO/27Al-18O/ATP/"
+                        },
+                        "ATP: line list": {
+                            "description": "Line lists for four isotopes of aluminium monoxide covering the pure rotation, rotation\u2013vibration and electronic (B \u2212 X blue\u2013green and A \u2212 X infrared bands) spectrum. States file updated 20-11-2015.",
+                            "references": [
+                                "Patrascu, A. T., Yurchenko, S. N., Tennyson, J., \"ExoMol molecular line lists: IX The spectrum of AlO\", Monthly Notices of the Royal Astronomical Society 449, 3613-3619 (2015). [http://dx.doi.org/10.1093/mnras/stv507][15PaYuTe.AlO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "ATP_README.txt",
+                                    "description": "Documentation for the AlO line list of the ATP dataset",
+                                    "url": "https://exomol.com/db/AlO/ATP_README.txt"
+                                },
+                                {
+                                    "file_name": "27Al-18O__ATP.states.bz2",
+                                    "description": "Labelled rovibrational states of (27Al)(18O). Some calculated (Ca) energy levels were replaced with Pseudo-experimental correction (PE) values.",
+                                    "url": "https://exomol.com/db/AlO/27Al-18O/ATP/27Al-18O__ATP.states.bz2"
+                                },
+                                {
+                                    "file_name": "27Al-18O__ATP.trans.bz2",
+                                    "description": "Frequency ordered transitions of (27Al)(18O)",
+                                    "url": "https://exomol.com/db/AlO/27Al-18O/ATP/27Al-18O__ATP.trans.bz2"
+                                }
+                            ]
+                        },
+                        "ATP: partition function": {
+                            "description": "Line lists for four isotopes of aluminium monoxide covering the pure rotation, rotation\u2013vibration and electronic (B \u2212 X blue\u2013green and A \u2212 X infrared bands) spectrum. States file updated 20-11-2015.",
+                            "references": [
+                                "Patrascu, A. T., Yurchenko, S. N., Tennyson, J., \"ExoMol molecular line lists: IX The spectrum of AlO\", Monthly Notices of the Royal Astronomical Society 449, 3613-3619 (2015). [http://dx.doi.org/10.1093/mnras/stv507][15PaYuTe.AlO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "ATP_README.txt",
+                                    "description": "Documentation for the AlO line list of the ATP dataset",
+                                    "url": "https://exomol.com/db/AlO/ATP_README.txt"
+                                },
+                                {
+                                    "file_name": "27Al-18O__ATP.pf",
+                                    "description": "Partition function for (27Al)(18O)",
+                                    "url": "https://exomol.com/db/AlO/27Al-18O/ATP/27Al-18O__ATP.pf"
+                                }
+                            ]
+                        },
+                        "ATP: other States files": {
+                            "description": "Line lists for four isotopes of aluminium monoxide covering the pure rotation, rotation\u2013vibration and electronic (B \u2212 X blue\u2013green and A \u2212 X infrared bands) spectrum. States file updated 20-11-2015.",
+                            "references": [
+                                "Patrascu, A. T., Yurchenko, S. N., Tennyson, J., \"ExoMol molecular line lists: IX The spectrum of AlO\", Monthly Notices of the Royal Astronomical Society 449, 3613-3619 (2015). [http://dx.doi.org/10.1093/mnras/stv507][15PaYuTe.AlO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "ATP_README.txt",
+                                    "description": "Documentation for the AlO line list of the ATP dataset",
+                                    "url": "https://exomol.com/db/AlO/ATP_README.txt"
+                                },
+                                {
+                                    "file_name": "27Al-18O__ATP_v1.states.bz2",
+                                    "description": "Labelled rovibrational states of (27Al)(18O): Original version of the States file",
+                                    "url": "https://exomol.com/db/AlO/27Al-18O/ATP/27Al-18O__ATP_v1.states.bz2"
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "CaO": {
+            "url": "https://exomol.com/data/molecules/CaO",
+            "40Ca16O": {
+                "url": "https://exomol.com/data/molecules/CaO/40Ca-16O",
+                "VBATHY": {
+                    "url": "https://exomol.com/data/molecules/CaO/40Ca-16O/VBATHY",
+                    "recommended": true,
+                    "data": {
+                        "Definitions file": {
+                            "url": "https://exomol.com/db/CaO/40Ca-16O/VBATHY/40Ca-16O__VBATHY.def"
+                        },
+                        "Spectroscopic Model": {
+                            "url": "https://exomol.com/models/CaO/40Ca-16O/VBATHY/"
+                        },
+                        "Spectrum overview": {
+                            "url": "/media/uploads/spectrum-images/40Ca-16O__VBATHY__spectrum.png"
+                        },
+                        "VBATHY: line list": {
+                            "description": "An accurate line list for calcium oxide.",
+                            "references": [
+                                "Yurchenko, S. N., Blissett, A., Asari, U., Vasilios, M., Hill, C., Tennyson, J., \"ExoMol molecular line lists - XIII: The spectrum of CaO\", Monthly Notices of the Royal Astronomical Society 456, 4524-4532 (2016). [http://dx.doi.org/10.1093/mnras/stv2858][16YuBlAs.CaO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "40Ca-16O__VBATHY.states.bz2",
+                                    "description": "Labelled rovibronic states of (40Ca)(16O) with some of the term values substituted with experimental counterparts, if available.",
+                                    "url": "https://exomol.com/db/CaO/40Ca-16O/VBATHY/40Ca-16O__VBATHY.states.bz2"
+                                },
+                                {
+                                    "file_name": "40Ca-16O__VBATHY.trans.bz2",
+                                    "description": "VBATHY (40Ca)(16O) hot line list",
+                                    "url": "https://exomol.com/db/CaO/40Ca-16O/VBATHY/40Ca-16O__VBATHY.trans.bz2"
+                                },
+                                {
+                                    "file_name": "CaO__README__VBATHY.txt",
+                                    "description": "Documentation for the CaO line lists of the VBATHY dataset",
+                                    "url": "https://exomol.com/db/CaO/40Ca-16O/VBATHY/CaO__README__VBATHY.txt"
+                                },
+                                {
+                                    "file_name": "40Ca-16O__VBATHY.abinitio.states.bz2",
+                                    "description": "Labelled rovibronic states of (40Ca)(16O). The state energies are purely those derived from ab initio calculation.",
+                                    "url": "https://exomol.com/db/CaO/40Ca-16O/VBATHY/40Ca-16O__VBATHY.abinitio.states.bz2"
+                                }
+                            ]
+                        },
+                        "VBATHY: partition function": {
+                            "description": "An accurate line list for calcium oxide.",
+                            "references": [
+                                "Yurchenko, S. N., Blissett, A., Asari, U., Vasilios, M., Hill, C., Tennyson, J., \"ExoMol molecular line lists - XIII: The spectrum of CaO\", Monthly Notices of the Royal Astronomical Society 456, 4524-4532 (2016). [http://dx.doi.org/10.1093/mnras/stv2858][16YuBlAs.CaO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "CaO__README__VBATHY.txt",
+                                    "description": "Documentation for the CaO line lists of the VBATHY dataset",
+                                    "url": "https://exomol.com/db/CaO/40Ca-16O/VBATHY/CaO__README__VBATHY.txt"
+                                },
+                                {
+                                    "file_name": "40Ca-16O__VBATHY.pf",
+                                    "description": "Partition function for (40Ca)(16O)",
+                                    "url": "https://exomol.com/db/CaO/40Ca-16O/VBATHY/40Ca-16O__VBATHY.pf"
+                                }
+                            ]
+                        },
+                        "VBATHY: program": {
+                            "description": "An accurate line list for calcium oxide.",
+                            "references": [
+                                "Yurchenko, S. N., Blissett, A., Asari, U., Vasilios, M., Hill, C., Tennyson, J., \"ExoMol molecular line lists - XIII: The spectrum of CaO\", Monthly Notices of the Royal Astronomical Society 456, 4524-4532 (2016). [http://dx.doi.org/10.1093/mnras/stv2858][16YuBlAs.CaO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "CaO__README__VBATHY.txt",
+                                    "description": "Documentation for the CaO line lists of the VBATHY dataset",
+                                    "url": "https://exomol.com/db/CaO/40Ca-16O/VBATHY/CaO__README__VBATHY.txt"
+                                },
+                                {
+                                    "file_name": "40Ca-16O__intensities.inp",
+                                    "description": "A Duo-input file used to produce the line list for CaO.",
+                                    "url": "https://exomol.com/db/CaO/40Ca-16O/VBATHY/40Ca-16O__intensities.inp"
+                                }
+                            ]
+                        },
+                        "VBATHY: opacity": {
+                            "description": "An accurate line list for calcium oxide.",
+                            "references": [
+                                "Yurchenko, S. N., Blissett, A., Asari, U., Vasilios, M., Hill, C., Tennyson, J., \"ExoMol molecular line lists - XIII: The spectrum of CaO\", Monthly Notices of the Royal Astronomical Society 456, 4524-4532 (2016). [http://dx.doi.org/10.1093/mnras/stv2858][16YuBlAs.CaO]",
+                                "Chubb, K. L., Rocchetto, M., Yurchenko, S. N., Min, M., Waldmann, I., Barstow, J. K., Molliere, P., Al-Refaie, A. F, Phillips, M. W., Tennyson, J., \"The ExoMolOP database: Cross sections and k-tables for molecules of interest in high-temperature exoplanet atmospheres\", Astronomy and Astrophysics 646, A21 (2020). [http://dx.doi.org/10.1051/0004-6361/202038350][20ChRoYu.]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "40Ca-16O__VBATHY.R1000_0.3-50mu.ktable.ARCiS.fits.gz",
+                                    "description": "ARCiS k-tables at R= 1000 (0.3-50mu) in fits format (gzipped): VBATHY (40Ca)(16O) line list.",
+                                    "url": "https://exomol.com/db/CaO/40Ca-16O/VBATHY/40Ca-16O__VBATHY.R1000_0.3-50mu.ktable.ARCiS.fits.gz"
+                                },
+                                {
+                                    "file_name": "40Ca-16O__VBATHY.R1000_0.3-50mu.ktable.petitRADTRANS.h5",
+                                    "description": "petitRADTRANS k-tables at R= 1000 (0.3-50mu) in HDF5 format: VBATHY (40Ca)(16O) line list.",
+                                    "url": "https://exomol.com/db/CaO/40Ca-16O/VBATHY/40Ca-16O__VBATHY.R1000_0.3-50mu.ktable.petitRADTRANS.h5"
+                                },
+                                {
+                                    "file_name": "40Ca-16O__VBATHY.R1000_0.3-50mu.ktable.NEMESIS.kta",
+                                    "description": "NEMESIS k-tables at R= 1000 (0.3-50mu) in NEMESIS-kta format: VBATHY (40Ca)(16O) line list.",
+                                    "url": "https://exomol.com/db/CaO/40Ca-16O/VBATHY/40Ca-16O__VBATHY.R1000_0.3-50mu.ktable.NEMESIS.kta"
+                                },
+                                {
+                                    "file_name": "40Ca-16O__VBATHY.R15000_0.3-50mu.xsec.TauREx.h5",
+                                    "description": "TauREx k-tables at R= 15000 (0.3-50mu) in HDF5 format: VBATHY (40Ca)(16O) line list.",
+                                    "url": "https://exomol.com/db/CaO/40Ca-16O/VBATHY/40Ca-16O__VBATHY.R15000_0.3-50mu.xsec.TauREx.h5"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "xsec-VBATHY": {
+                    "url": "https://exomol.com/data/molecules/CaO/40Ca-16O/xsec-VBATHY",
+                    "recommended": false,
+                    "data": {
+                        "xsec-VBATHY: cross section": {
+                            "description": "Online absorption cross section service: this cross section has been generated from data in the VBATHY CaO calculated line list [Yurchenko et al. (2016)] for the ExoMol project [Tennyson and Yurchenko (2012)] using the procedure described in [Hill et al. (2013)].",
+                            "references": [
+                                "Yurchenko, S. N., Blissett, A., Asari, U., Vasilios, M., Hill, C., Tennyson, J., \"ExoMol molecular line lists - XIII: The spectrum of CaO\", Monthly Notices of the Royal Astronomical Society 456, 4524-4532 (2016). [http://dx.doi.org/10.1093/mnras/stv2858][16YuBlAs.CaO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "/xsec/40Ca-16O",
+                                    "description": "VBATHY temperature dependent cross-sections",
+                                    "url": "https://exomol.com/xsec/40Ca-16O"
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "MgO": {
+            "url": "https://exomol.com/data/molecules/MgO",
+            "24Mg16O": {
+                "url": "https://exomol.com/data/molecules/MgO/24Mg-16O",
+                "xsec-LiTY": {
+                    "url": "https://exomol.com/data/molecules/MgO/24Mg-16O/xsec-LiTY",
+                    "recommended": false,
+                    "data": {
+                        "xsec-LiTY: cross section": {
+                            "description": "Online absorption cross section service: this 24Mg16O cross section has been generated from the line list LiTY [Li et al, 2019] using the procedure described in [Hill et al. (2013)].",
+                            "references": [
+                                "Li, H. Y., Tennyson, J., Yurchenko, S. N., \"ExoMol line lists \u2013 XXXII. The rovibronic spectrum of MgO\", Monthly Notices of the Royal Astronomical Society 486, 2351-2365 (2019). [https://doi.org/10.1093/mnras/stz912][19LiTeYu.MgO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "24Mg-16O",
+                                    "description": "Absorption cross section service for (24Mg)(16O)",
+                                    "url": "https://exomol.com/xsec/24Mg-16O"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "LiTY": {
+                    "url": "https://exomol.com/data/molecules/MgO/24Mg-16O/LiTY",
+                    "recommended": true,
+                    "data": {
+                        "Definitions file": {
+                            "url": "https://exomol.com/db/MgO/24Mg-16O/LiTY/24Mg-16O__LiTY.def"
+                        },
+                        "Spectroscopic Model": {
+                            "url": "https://exomol.com/models/MgO/24Mg-16O/LiTY/"
+                        },
+                        "Spectrum overview": {
+                            "url": "/media/uploads/spectrum-images/24Mg-16O__LiTY__spectrum.png"
+                        },
+                        "LiTY: line list": {
+                            "description": "The LiTY empirical MgO line list",
+                            "references": [
+                                "Li, H. Y., Tennyson, J., Yurchenko, S. N., \"ExoMol line lists \u2013 XXXII. The rovibronic spectrum of MgO\", Monthly Notices of the Royal Astronomical Society 486, 2351-2365 (2019). [https://doi.org/10.1093/mnras/stz912][19LiTeYu.MgO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "24Mg-16O__LiTY.trans.bz2",
+                                    "description": "LiTY (24Mg)(16O) line list transition file.",
+                                    "url": "https://exomol.com/db/MgO/24Mg-16O/LiTY/24Mg-16O__LiTY.trans.bz2"
+                                },
+                                {
+                                    "file_name": "24Mg-16O__LiTY.states.bz2",
+                                    "description": "LiTY (24Mg)(16O) line list States file.",
+                                    "url": "https://exomol.com/db/MgO/24Mg-16O/LiTY/24Mg-16O__LiTY.states.bz2"
+                                }
+                            ]
+                        },
+                        "LiTY: partition function": {
+                            "description": "The LiTY empirical MgO line list",
+                            "references": [
+                                "Li, H. Y., Tennyson, J., Yurchenko, S. N., \"ExoMol line lists \u2013 XXXII. The rovibronic spectrum of MgO\", Monthly Notices of the Royal Astronomical Society 486, 2351-2365 (2019). [https://doi.org/10.1093/mnras/stz912][19LiTeYu.MgO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "24Mg-16O__LiTY.pf",
+                                    "description": "LiTY (24Mg)(16O) line list partition function.",
+                                    "url": "https://exomol.com/db/MgO/24Mg-16O/LiTY/24Mg-16O__LiTY.pf"
+                                }
+                            ]
+                        },
+                        "LiTY: opacity": {
+                            "description": "The LiTY empirical MgO line list",
+                            "references": [
+                                "Li, H. Y., Tennyson, J., Yurchenko, S. N., \"ExoMol line lists \u2013 XXXII. The rovibronic spectrum of MgO\", Monthly Notices of the Royal Astronomical Society 486, 2351-2365 (2019). [https://doi.org/10.1093/mnras/stz912][19LiTeYu.MgO]",
+                                "Chubb, K. L., Rocchetto, M., Yurchenko, S. N., Min, M., Waldmann, I., Barstow, J. K., Molliere, P., Al-Refaie, A. F, Phillips, M. W., Tennyson, J., \"The ExoMolOP database: Cross sections and k-tables for molecules of interest in high-temperature exoplanet atmospheres\", Astronomy and Astrophysics 646, A21 (2020). [http://dx.doi.org/10.1051/0004-6361/202038350][20ChRoYu.]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "24Mg-16O__LiTY.R1000_0.3-50mu.ktable.ARCiS.fits.gz",
+                                    "description": "ARCiS k-tables at R= 1000 (0.3-50mu) in fits format (gzipped): LiTY (24Mg)(16O) line list.",
+                                    "url": "https://exomol.com/db/MgO/24Mg-16O/LiTY/24Mg-16O__LiTY.R1000_0.3-50mu.ktable.ARCiS.fits.gz"
+                                },
+                                {
+                                    "file_name": "24Mg-16O__LiTY.R1000_0.3-50mu.ktable.petitRADTRANS.h5",
+                                    "description": "petitRADTRANS k-tables at R= 1000 (0.3-50mu) in HDF5 format: LiTY (24Mg)(16O) line list.",
+                                    "url": "https://exomol.com/db/MgO/24Mg-16O/LiTY/24Mg-16O__LiTY.R1000_0.3-50mu.ktable.petitRADTRANS.h5"
+                                },
+                                {
+                                    "file_name": "24Mg-16O__LiTY.R1000_0.3-50mu.ktable.NEMESIS.kta",
+                                    "description": "NEMESIS k-tables at R= 1000 (0.3-50mu) in NEMESIS-kta format: LiTY (24Mg)(16O) line list.",
+                                    "url": "https://exomol.com/db/MgO/24Mg-16O/LiTY/24Mg-16O__LiTY.R1000_0.3-50mu.ktable.NEMESIS.kta"
+                                },
+                                {
+                                    "file_name": "24Mg-16O__LiTY.R15000_0.3-50mu.xsec.TauREx.h5",
+                                    "description": "TauREx k-tables at R= 15000 (0.3-50mu) in HDF5 format: LiTY (24Mg)(16O) line list.",
+                                    "url": "https://exomol.com/db/MgO/24Mg-16O/LiTY/24Mg-16O__LiTY.R15000_0.3-50mu.xsec.TauREx.h5"
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            "24Mg17O": {
+                "url": "https://exomol.com/data/molecules/MgO/24Mg-17O",
+                "LiTY": {
+                    "url": "https://exomol.com/data/molecules/MgO/24Mg-17O/LiTY",
+                    "recommended": true,
+                    "data": {
+                        "Definitions file": {
+                            "url": "https://exomol.com/db/MgO/24Mg-17O/LiTY/24Mg-17O__LiTY.def"
+                        },
+                        "Spectroscopic Model": {
+                            "url": "https://exomol.com/models/MgO/24Mg-17O/LiTY/"
+                        },
+                        "LiTY: line list": {
+                            "description": "The LiTY empirical MgO line list",
+                            "references": [
+                                "Li, H. Y., Tennyson, J., Yurchenko, S. N., \"ExoMol line lists \u2013 XXXII. The rovibronic spectrum of MgO\", Monthly Notices of the Royal Astronomical Society 486, 2351-2365 (2019). [https://doi.org/10.1093/mnras/stz912][19LiTeYu.MgO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "24Mg-17O__LiTY.trans.bz2",
+                                    "description": "LiTY (24Mg)(17O) line list transition file",
+                                    "url": "https://exomol.com/db/MgO/24Mg-17O/LiTY/24Mg-17O__LiTY.trans.bz2"
+                                },
+                                {
+                                    "file_name": "24Mg-17O__LiTY.states.bz2",
+                                    "description": "LiTY (24Mg)(17O) line list States file.",
+                                    "url": "https://exomol.com/db/MgO/24Mg-17O/LiTY/24Mg-17O__LiTY.states.bz2"
+                                }
+                            ]
+                        },
+                        "LiTY: partition function": {
+                            "description": "The LiTY empirical MgO line list",
+                            "references": [
+                                "Li, H. Y., Tennyson, J., Yurchenko, S. N., \"ExoMol line lists \u2013 XXXII. The rovibronic spectrum of MgO\", Monthly Notices of the Royal Astronomical Society 486, 2351-2365 (2019). [https://doi.org/10.1093/mnras/stz912][19LiTeYu.MgO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "24Mg-17O__LiTY.pf",
+                                    "description": "LiTY (24Mg)(17O) line list partition function.",
+                                    "url": "https://exomol.com/db/MgO/24Mg-17O/LiTY/24Mg-17O__LiTY.pf"
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            "24Mg18O": {
+                "url": "https://exomol.com/data/molecules/MgO/24Mg-18O",
+                "LiTY": {
+                    "url": "https://exomol.com/data/molecules/MgO/24Mg-18O/LiTY",
+                    "recommended": true,
+                    "data": {
+                        "Definitions file": {
+                            "url": "https://exomol.com/db/MgO/24Mg-18O/LiTY/24Mg-18O__LiTY.def"
+                        },
+                        "Spectroscopic Model": {
+                            "url": "https://exomol.com/models/MgO/24Mg-18O/LiTY/"
+                        },
+                        "LiTY: line list": {
+                            "description": "The LiTY empirical MgO line list",
+                            "references": [
+                                "Li, H. Y., Tennyson, J., Yurchenko, S. N., \"ExoMol line lists \u2013 XXXII. The rovibronic spectrum of MgO\", Monthly Notices of the Royal Astronomical Society 486, 2351-2365 (2019). [https://doi.org/10.1093/mnras/stz912][19LiTeYu.MgO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "24Mg-18O__LiTY.trans.bz2",
+                                    "description": "LiTY (24Mg)(18O) line list transition file",
+                                    "url": "https://exomol.com/db/MgO/24Mg-18O/LiTY/24Mg-18O__LiTY.trans.bz2"
+                                },
+                                {
+                                    "file_name": "24Mg-18O__LiTY.states.bz2",
+                                    "description": "LiTY (24Mg)(18O) line list States file.",
+                                    "url": "https://exomol.com/db/MgO/24Mg-18O/LiTY/24Mg-18O__LiTY.states.bz2"
+                                }
+                            ]
+                        },
+                        "LiTY: partition function": {
+                            "description": "The LiTY empirical MgO line list",
+                            "references": [
+                                "Li, H. Y., Tennyson, J., Yurchenko, S. N., \"ExoMol line lists \u2013 XXXII. The rovibronic spectrum of MgO\", Monthly Notices of the Royal Astronomical Society 486, 2351-2365 (2019). [https://doi.org/10.1093/mnras/stz912][19LiTeYu.MgO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "24Mg-18O__LiTY.pf",
+                                    "description": "LiTY (24Mg)(18O) line list partition function.",
+                                    "url": "https://exomol.com/db/MgO/24Mg-18O/LiTY/24Mg-18O__LiTY.pf"
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            "25Mg16O": {
+                "url": "https://exomol.com/data/molecules/MgO/25Mg-16O",
+                "LiTY": {
+                    "url": "https://exomol.com/data/molecules/MgO/25Mg-16O/LiTY",
+                    "recommended": true,
+                    "data": {
+                        "Definitions file": {
+                            "url": "https://exomol.com/db/MgO/25Mg-16O/LiTY/25Mg-16O__LiTY.def"
+                        },
+                        "Spectroscopic Model": {
+                            "url": "https://exomol.com/models/MgO/25Mg-16O/LiTY/"
+                        },
+                        "LiTY: line list": {
+                            "description": "The LiTY empirical MgO line list",
+                            "references": [
+                                "Li, H. Y., Tennyson, J., Yurchenko, S. N., \"ExoMol line lists \u2013 XXXII. The rovibronic spectrum of MgO\", Monthly Notices of the Royal Astronomical Society 486, 2351-2365 (2019). [https://doi.org/10.1093/mnras/stz912][19LiTeYu.MgO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "25Mg-16O__LiTY.trans.bz2",
+                                    "description": "LiTY (25Mg)(16O) line list transition file",
+                                    "url": "https://exomol.com/db/MgO/25Mg-16O/LiTY/25Mg-16O__LiTY.trans.bz2"
+                                },
+                                {
+                                    "file_name": "25Mg-16O__LiTY.states.bz2",
+                                    "description": "LiTY (25Mg)(16O) line list States file.",
+                                    "url": "https://exomol.com/db/MgO/25Mg-16O/LiTY/25Mg-16O__LiTY.states.bz2"
+                                }
+                            ]
+                        },
+                        "LiTY: partition function": {
+                            "description": "The LiTY empirical MgO line list",
+                            "references": [
+                                "Li, H. Y., Tennyson, J., Yurchenko, S. N., \"ExoMol line lists \u2013 XXXII. The rovibronic spectrum of MgO\", Monthly Notices of the Royal Astronomical Society 486, 2351-2365 (2019). [https://doi.org/10.1093/mnras/stz912][19LiTeYu.MgO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "25Mg-16O__LiTY.pf",
+                                    "description": "LiTY (25Mg)(16O) line list partition function.",
+                                    "url": "https://exomol.com/db/MgO/25Mg-16O/LiTY/25Mg-16O__LiTY.pf"
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            "26Mg16O": {
+                "url": "https://exomol.com/data/molecules/MgO/26Mg-16O",
+                "LiTY": {
+                    "url": "https://exomol.com/data/molecules/MgO/26Mg-16O/LiTY",
+                    "recommended": true,
+                    "data": {
+                        "Definitions file": {
+                            "url": "https://exomol.com/db/MgO/26Mg-16O/LiTY/26Mg-16O__LiTY.def"
+                        },
+                        "Spectroscopic Model": {
+                            "url": "https://exomol.com/models/MgO/26Mg-16O/LiTY/"
+                        },
+                        "LiTY: line list": {
+                            "description": "The LiTY empirical MgO line list",
+                            "references": [
+                                "Li, H. Y., Tennyson, J., Yurchenko, S. N., \"ExoMol line lists \u2013 XXXII. The rovibronic spectrum of MgO\", Monthly Notices of the Royal Astronomical Society 486, 2351-2365 (2019). [https://doi.org/10.1093/mnras/stz912][19LiTeYu.MgO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "26Mg-16O__LiTY.trans.bz2",
+                                    "description": "LiTY (26Mg)(16O) line list transition file",
+                                    "url": "https://exomol.com/db/MgO/26Mg-16O/LiTY/26Mg-16O__LiTY.trans.bz2"
+                                },
+                                {
+                                    "file_name": "26Mg-16O__LiTY.states.bz2",
+                                    "description": "LiTY (26Mg)(16O) line list States file.",
+                                    "url": "https://exomol.com/db/MgO/26Mg-16O/LiTY/26Mg-16O__LiTY.states.bz2"
+                                }
+                            ]
+                        },
+                        "LiTY: partition function": {
+                            "description": "The LiTY empirical MgO line list",
+                            "references": [
+                                "Li, H. Y., Tennyson, J., Yurchenko, S. N., \"ExoMol line lists \u2013 XXXII. The rovibronic spectrum of MgO\", Monthly Notices of the Royal Astronomical Society 486, 2351-2365 (2019). [https://doi.org/10.1093/mnras/stz912][19LiTeYu.MgO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "26Mg-16O__LiTY.pf",
+                                    "description": "LiTY (26Mg)(16O) line list partition function.",
+                                    "url": "https://exomol.com/db/MgO/26Mg-16O/LiTY/26Mg-16O__LiTY.pf"
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "SiO": {
+            "url": "https://exomol.com/data/molecules/SiO",
+            "28Si16O": {
+                "url": "https://exomol.com/data/molecules/SiO/28Si-16O",
+                "Kurucz-SiO": {
+                    "url": "https://exomol.com/data/molecules/SiO/28Si-16O/Kurucz-SiO",
+                    "recommended": false,
+                    "data": {
+                        "Definitions file": {
+                            "url": "https://exomol.com/db/SiO/28Si-16O/Kurucz-SiO/28Si-16O__Kurucz-SiO.def"
+                        },
+                        "Spectroscopic Model": {
+                            "url": "https://exomol.com/models/SiO/28Si-16O/Kurucz-SiO/"
+                        },
+                        "Spectrum overview": {
+                            "url": "/media/uploads/spectrum-images/28Si-16O__Kurucz-SiO__spectrum.png"
+                        },
+                        "Kurucz-SiO: line list": {
+                            "description": "A synthetic line list by Kurucz http://kurucz.harvard.edu/molecules.html for SiO covering the X-X, A-X, E-X bands.",
+                            "references": [
+                                "Kurucz, R. L., \"Atomic and molecular data for opacity calculations\", Revista Mexicana de Astronomia y Astrofisica 23, 45-48 (1992). [http://adsabs.harvard.edu/abs/1992RMxAA..23...45K][92Kurucz.CN]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "28Si-16O__Kurucz-SiO__X-X.trans.bz2",
+                                    "description": "Transition file for the Kurucz-SiO line list for (28Si)(16O) line list: X-X",
+                                    "url": "https://exomol.com/db/SiO/28Si-16O/Kurucz-SiO/28Si-16O__Kurucz-SiO__X-X.trans.bz2"
+                                },
+                                {
+                                    "file_name": "28Si-16O__Kurucz-SiO__A-X.trans.bz2",
+                                    "description": "Transition file for the Kurucz-SiO line list for (28Si)(16O) line list: A-X",
+                                    "url": "https://exomol.com/db/SiO/28Si-16O/Kurucz-SiO/28Si-16O__Kurucz-SiO__A-X.trans.bz2"
+                                },
+                                {
+                                    "file_name": "28Si-16O__Kurucz-SiO__E-X.trans.bz2",
+                                    "description": "Transition file for the Kurucz-SiO line list for (28Si)(16O) line list: E-X",
+                                    "url": "https://exomol.com/db/SiO/28Si-16O/Kurucz-SiO/28Si-16O__Kurucz-SiO__E-X.trans.bz2"
+                                },
+                                {
+                                    "file_name": "28Si-16O__Kurucz-SiO.states.bz2",
+                                    "description": "States file for the Kurucz-SiO line list for (28Si)(16O)",
+                                    "url": "https://exomol.com/db/SiO/28Si-16O/Kurucz-SiO/28Si-16O__Kurucz-SiO.states.bz2"
+                                }
+                            ]
+                        },
+                        "Kurucz-SiO: partition function": {
+                            "description": "A synthetic line list by Kurucz http://kurucz.harvard.edu/molecules.html for SiO covering the X-X, A-X, E-X bands.",
+                            "references": [
+                                "Barklem, P. S., Collet, R., \"Partition functions and equilibrium constants for diatomic molecules and atoms of astrophysical interest\", Astronomy & Astrophysics 588, A96 (2016). [https://doi.org/10.1051/0004-6361/201526961][16BaCoxx.O2]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "28Si-16O__Kurucz-SiO.pf",
+                                    "description": "Partition function file for (28Si)(16O) line list taken from Barklem P.S. and Collet R. <Astron. Astrophys. 588, A96 (2016)>",
+                                    "url": "https://exomol.com/db/SiO/28Si-16O/Kurucz-SiO/28Si-16O__Kurucz-SiO.pf"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "EBJT": {
+                    "url": "https://exomol.com/data/molecules/SiO/28Si-16O/EBJT",
+                    "recommended": true,
+                    "data": {
+                        "Definitions file": {
+                            "url": "https://exomol.com/db/SiO/28Si-16O/EBJT/28Si-16O__EBJT.def"
+                        },
+                        "Spectroscopic Model": {
+                            "url": "https://exomol.com/models/SiO/28Si-16O/EBJT/"
+                        },
+                        "Spectrum overview": {
+                            "url": "/media/uploads/spectrum-images/28Si-16O__EBJT__spectrum.png"
+                        },
+                        "EBJT: line list": {
+                            "description": "Calculated line lists, energy levels and partition sums for isotopologues of SiO",
+                            "references": [
+                                "Barton, E. J., Yurchenko, S. N., Tennyson, J., \"ExoMol line lists - II. The ro-vibrational spectrum of SiO\", Monthly Notices of the Royal Astronomical Society 434, 1469-1475 (2013). [https://doi.org/10.1093/mnras/stt1105][13BaYuTe.SiO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "28Si-16O__EBJT.trans.bz2",
+                                    "description": "Transitions file for the EBJT (28Si)(16O) line list",
+                                    "url": "https://exomol.com/db/SiO/28Si-16O/EBJT/28Si-16O__EBJT.trans.bz2"
+                                },
+                                {
+                                    "file_name": "EBJT-README.txt",
+                                    "description": "Documentation for the EBJT data set of line lists and partition functions for isotopologues of SiO",
+                                    "url": "https://exomol.com/db/SiO/EBJT-README.txt"
+                                },
+                                {
+                                    "file_name": "28Si-16O__EBJT.states.bz2",
+                                    "description": "Energy levels file for the EBJT (28Si)(16O) line list",
+                                    "url": "https://exomol.com/db/SiO/28Si-16O/EBJT/28Si-16O__EBJT.states.bz2"
+                                }
+                            ]
+                        },
+                        "EBJT: partition function": {
+                            "description": "Calculated line lists, energy levels and partition sums for isotopologues of SiO",
+                            "references": [
+                                "Barton, E. J., Yurchenko, S. N., Tennyson, J., \"ExoMol line lists - II. The ro-vibrational spectrum of SiO\", Monthly Notices of the Royal Astronomical Society 434, 1469-1475 (2013). [https://doi.org/10.1093/mnras/stt1105][13BaYuTe.SiO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "28Si-16O__EBJT.pf",
+                                    "description": "Partition function for the (28Si)(16O) isotopologue of SiO in the temperature range 5 - 9000 K",
+                                    "url": "https://exomol.com/db/SiO/28Si-16O/EBJT/28Si-16O__EBJT.pf"
+                                },
+                                {
+                                    "file_name": "EBJT-README.txt",
+                                    "description": "Documentation for the EBJT data set of line lists and partition functions for isotopologues of SiO",
+                                    "url": "https://exomol.com/db/SiO/EBJT-README.txt"
+                                }
+                            ]
+                        },
+                        "EBJT: opacity": {
+                            "description": "Calculated line lists, energy levels and partition sums for isotopologues of SiO",
+                            "references": [
+                                "Barton, E. J., Yurchenko, S. N., Tennyson, J., \"ExoMol line lists - II. The ro-vibrational spectrum of SiO\", Monthly Notices of the Royal Astronomical Society 434, 1469-1475 (2013). [https://doi.org/10.1093/mnras/stt1105][13BaYuTe.SiO]",
+                                "Chubb, K. L., Rocchetto, M., Yurchenko, S. N., Min, M., Waldmann, I., Barstow, J. K., Molliere, P., Al-Refaie, A. F, Phillips, M. W., Tennyson, J., \"The ExoMolOP database: Cross sections and k-tables for molecules of interest in high-temperature exoplanet atmospheres\", Astronomy and Astrophysics 646, A21 (2020). [http://dx.doi.org/10.1051/0004-6361/202038350][20ChRoYu.]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "28Si-16O__EBJT.R1000_0.3-50mu.ktable.ARCiS.fits.gz",
+                                    "description": "ARCiS k-tables at R= 1000 (0.3-50mu) in fits format (gzipped): EBJT (28Si)(16O) line list.",
+                                    "url": "https://exomol.com/db/SiO/28Si-16O/EBJT/28Si-16O__EBJT.R1000_0.3-50mu.ktable.ARCiS.fits.gz"
+                                },
+                                {
+                                    "file_name": "28Si-16O__EBJT.R1000_0.3-50mu.ktable.petitRADTRANS.h5",
+                                    "description": "petitRADTRANS k-tables at R= 1000 (0.3-50mu) in HDF5 format: EBJT (28Si)(16O) line list.",
+                                    "url": "https://exomol.com/db/SiO/28Si-16O/EBJT/28Si-16O__EBJT.R1000_0.3-50mu.ktable.petitRADTRANS.h5"
+                                },
+                                {
+                                    "file_name": "28Si-16O__EBJT.R1000_0.3-50mu.ktable.NEMESIS.kta",
+                                    "description": "NEMESIS k-tables at R= 1000 (0.3-50mu) in NEMESIS-kta format: EBJT (28Si)(16O) line list.",
+                                    "url": "https://exomol.com/db/SiO/28Si-16O/EBJT/28Si-16O__EBJT.R1000_0.3-50mu.ktable.NEMESIS.kta"
+                                },
+                                {
+                                    "file_name": "28Si-16O__EBJT.R15000_0.3-50mu.xsec.TauREx.h5",
+                                    "description": "TauREx k-tables at R= 15000 (0.3-50mu) in HDF5 format: EBJT (28Si)(16O) line list.",
+                                    "url": "https://exomol.com/db/SiO/28Si-16O/EBJT/28Si-16O__EBJT.R15000_0.3-50mu.xsec.TauREx.h5"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "xsec-Kurucz-SiO": {
+                    "url": "https://exomol.com/data/molecules/SiO/28Si-16O/xsec-Kurucz-SiO",
+                    "recommended": false,
+                    "data": {
+                        "xsec-Kurucz-SiO: cross section": {
+                            "description": "Online absorption cross section service: this cross section has been generated from data in the Kurucz-SiO line list using the procedure described in [Hill et al. (2013)].",
+                            "references": [
+                                "Hill, C., Yurchenko, S. N., Tennyson, J., \"Temperature-dependent molecular absorption cross sections for exoplanets and other atmospheres\", Icarus 226, 1673-1677 (2013). [http://www.sciencedirect.com/science/article/pii/S0019103512003041][13HiYuTe.SO2]",
+                                "Tennyson, J., Yurchenko, S. N., \"ExoMol: molecular line lists for exoplanet and other atmospheres\", Monthly Notices of the Royal Astronomical Society 425, 21-33 (2012). [https://doi.org/10.1111/j.1365-2966.2012.21440.x][12TeYuxx]",
+                                "Barton, E. J., Yurchenko, S. N., Tennyson, J., \"ExoMol line lists - II. The ro-vibrational spectrum of SiO\", Monthly Notices of the Royal Astronomical Society 434, 1469-1475 (2013). [https://doi.org/10.1093/mnras/stt1105][13BaYuTe.SiO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "28Si-16O",
+                                    "description": "Absorption cross section service for (28Si)(16O)",
+                                    "url": "https://exomol.com/xsec/28Si-16O"
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            "28Si17O": {
+                "url": "https://exomol.com/data/molecules/SiO/28Si-17O",
+                "EBJT": {
+                    "url": "https://exomol.com/data/molecules/SiO/28Si-17O/EBJT",
+                    "recommended": true,
+                    "data": {
+                        "Definitions file": {
+                            "url": "https://exomol.com/db/SiO/28Si-17O/EBJT/28Si-17O__EBJT.def"
+                        },
+                        "Spectroscopic Model": {
+                            "url": "https://exomol.com/models/SiO/28Si-17O/EBJT/"
+                        },
+                        "EBJT: line list": {
+                            "description": "Calculated line lists, energy levels and partition sums for isotopologues of SiO",
+                            "references": [
+                                "Barton, E. J., Yurchenko, S. N., Tennyson, J., \"ExoMol line lists - II. The ro-vibrational spectrum of SiO\", Monthly Notices of the Royal Astronomical Society 434, 1469-1475 (2013). [https://doi.org/10.1093/mnras/stt1105][13BaYuTe.SiO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "28Si-17O__EBJT.states.bz2",
+                                    "description": "Energy levels file for the EBJT (28Si)(17O) line list",
+                                    "url": "https://exomol.com/db/SiO/28Si-17O/EBJT/28Si-17O__EBJT.states.bz2"
+                                },
+                                {
+                                    "file_name": "28Si-17O__EBJT.trans.bz2",
+                                    "description": "Transitions file for the EBJT (28Si)(17O) line list",
+                                    "url": "https://exomol.com/db/SiO/28Si-17O/EBJT/28Si-17O__EBJT.trans.bz2"
+                                },
+                                {
+                                    "file_name": "EBJT-README.txt",
+                                    "description": "Documentation for the EBJT data set of line lists and partition functions for isotopologues of SiO",
+                                    "url": "https://exomol.com/db/SiO/EBJT-README.txt"
+                                }
+                            ]
+                        },
+                        "EBJT: partition function": {
+                            "description": "Calculated line lists, energy levels and partition sums for isotopologues of SiO",
+                            "references": [
+                                "Barton, E. J., Yurchenko, S. N., Tennyson, J., \"ExoMol line lists - II. The ro-vibrational spectrum of SiO\", Monthly Notices of the Royal Astronomical Society 434, 1469-1475 (2013). [https://doi.org/10.1093/mnras/stt1105][13BaYuTe.SiO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "28Si-17O__EBJT.pf",
+                                    "description": "Partition function for the (28Si)(17O) isotopologue of SiO in the temperature range 5 - 9000 K",
+                                    "url": "https://exomol.com/db/SiO/28Si-17O/EBJT/28Si-17O__EBJT.pf"
+                                },
+                                {
+                                    "file_name": "EBJT-README.txt",
+                                    "description": "Documentation for the EBJT data set of line lists and partition functions for isotopologues of SiO",
+                                    "url": "https://exomol.com/db/SiO/EBJT-README.txt"
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            "28Si18O": {
+                "url": "https://exomol.com/data/molecules/SiO/28Si-18O",
+                "EBJT": {
+                    "url": "https://exomol.com/data/molecules/SiO/28Si-18O/EBJT",
+                    "recommended": true,
+                    "data": {
+                        "Definitions file": {
+                            "url": "https://exomol.com/db/SiO/28Si-18O/EBJT/28Si-18O__EBJT.def"
+                        },
+                        "Spectroscopic Model": {
+                            "url": "https://exomol.com/models/SiO/28Si-18O/EBJT/"
+                        },
+                        "EBJT: line list": {
+                            "description": "Calculated line lists, energy levels and partition sums for isotopologues of SiO",
+                            "references": [
+                                "Barton, E. J., Yurchenko, S. N., Tennyson, J., \"ExoMol line lists - II. The ro-vibrational spectrum of SiO\", Monthly Notices of the Royal Astronomical Society 434, 1469-1475 (2013). [https://doi.org/10.1093/mnras/stt1105][13BaYuTe.SiO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "28Si-18O__EBJT.states.bz2",
+                                    "description": "Energy levels file for the EBJT (28Si)(18O) line list",
+                                    "url": "https://exomol.com/db/SiO/28Si-18O/EBJT/28Si-18O__EBJT.states.bz2"
+                                },
+                                {
+                                    "file_name": "28Si-18O__EBJT.trans.bz2",
+                                    "description": "Transitions file for the EBJT (28Si)(18O) line list",
+                                    "url": "https://exomol.com/db/SiO/28Si-18O/EBJT/28Si-18O__EBJT.trans.bz2"
+                                },
+                                {
+                                    "file_name": "EBJT-README.txt",
+                                    "description": "Documentation for the EBJT data set of line lists and partition functions for isotopologues of SiO",
+                                    "url": "https://exomol.com/db/SiO/EBJT-README.txt"
+                                }
+                            ]
+                        },
+                        "EBJT: partition function": {
+                            "description": "Calculated line lists, energy levels and partition sums for isotopologues of SiO",
+                            "references": [
+                                "Barton, E. J., Yurchenko, S. N., Tennyson, J., \"ExoMol line lists - II. The ro-vibrational spectrum of SiO\", Monthly Notices of the Royal Astronomical Society 434, 1469-1475 (2013). [https://doi.org/10.1093/mnras/stt1105][13BaYuTe.SiO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "28Si-18O__EBJT.pf",
+                                    "description": "Partition function for the (28Si)(18O) isotopologue of SiO in the temperature range 5 - 9000 K",
+                                    "url": "https://exomol.com/db/SiO/28Si-18O/EBJT/28Si-18O__EBJT.pf"
+                                },
+                                {
+                                    "file_name": "EBJT-README.txt",
+                                    "description": "Documentation for the EBJT data set of line lists and partition functions for isotopologues of SiO",
+                                    "url": "https://exomol.com/db/SiO/EBJT-README.txt"
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            "29Si16O": {
+                "url": "https://exomol.com/data/molecules/SiO/29Si-16O",
+                "EBJT": {
+                    "url": "https://exomol.com/data/molecules/SiO/29Si-16O/EBJT",
+                    "recommended": true,
+                    "data": {
+                        "Definitions file": {
+                            "url": "https://exomol.com/db/SiO/29Si-16O/EBJT/29Si-16O__EBJT.def"
+                        },
+                        "Spectroscopic Model": {
+                            "url": "https://exomol.com/models/SiO/29Si-16O/EBJT/"
+                        },
+                        "EBJT: line list": {
+                            "description": "Calculated line lists, energy levels and partition sums for isotopologues of SiO",
+                            "references": [
+                                "Barton, E. J., Yurchenko, S. N., Tennyson, J., \"ExoMol line lists - II. The ro-vibrational spectrum of SiO\", Monthly Notices of the Royal Astronomical Society 434, 1469-1475 (2013). [https://doi.org/10.1093/mnras/stt1105][13BaYuTe.SiO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "29Si-16O__EBJT.states.bz2",
+                                    "description": "Energy levels file for the EBJT (29Si)(16O) line list",
+                                    "url": "https://exomol.com/db/SiO/29Si-16O/EBJT/29Si-16O__EBJT.states.bz2"
+                                },
+                                {
+                                    "file_name": "29Si-16O__EBJT.trans.bz2",
+                                    "description": "Transitions file for the EBJT (29Si)(16O) line list",
+                                    "url": "https://exomol.com/db/SiO/29Si-16O/EBJT/29Si-16O__EBJT.trans.bz2"
+                                },
+                                {
+                                    "file_name": "EBJT-README.txt",
+                                    "description": "Documentation for the EBJT data set of line lists and partition functions for isotopologues of SiO",
+                                    "url": "https://exomol.com/db/SiO/EBJT-README.txt"
+                                }
+                            ]
+                        },
+                        "EBJT: partition function": {
+                            "description": "Calculated line lists, energy levels and partition sums for isotopologues of SiO",
+                            "references": [
+                                "Barton, E. J., Yurchenko, S. N., Tennyson, J., \"ExoMol line lists - II. The ro-vibrational spectrum of SiO\", Monthly Notices of the Royal Astronomical Society 434, 1469-1475 (2013). [https://doi.org/10.1093/mnras/stt1105][13BaYuTe.SiO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "29Si-16O__EBJT.pf",
+                                    "description": "Partition function for the (29Si)(16O) isotopologue of SiO in the temperature range 5 - 9000 K",
+                                    "url": "https://exomol.com/db/SiO/29Si-16O/EBJT/29Si-16O__EBJT.pf"
+                                },
+                                {
+                                    "file_name": "EBJT-README.txt",
+                                    "description": "Documentation for the EBJT data set of line lists and partition functions for isotopologues of SiO",
+                                    "url": "https://exomol.com/db/SiO/EBJT-README.txt"
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            "30Si16O": {
+                "url": "https://exomol.com/data/molecules/SiO/30Si-16O",
+                "EBJT": {
+                    "url": "https://exomol.com/data/molecules/SiO/30Si-16O/EBJT",
+                    "recommended": true,
+                    "data": {
+                        "Definitions file": {
+                            "url": "https://exomol.com/db/SiO/30Si-16O/EBJT/30Si-16O__EBJT.def"
+                        },
+                        "Spectroscopic Model": {
+                            "url": "https://exomol.com/models/SiO/30Si-16O/EBJT/"
+                        },
+                        "EBJT: line list": {
+                            "description": "Calculated line lists, energy levels and partition sums for isotopologues of SiO",
+                            "references": [
+                                "Barton, E. J., Yurchenko, S. N., Tennyson, J., \"ExoMol line lists - II. The ro-vibrational spectrum of SiO\", Monthly Notices of the Royal Astronomical Society 434, 1469-1475 (2013). [https://doi.org/10.1093/mnras/stt1105][13BaYuTe.SiO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "30Si-16O__EBJT.states.bz2",
+                                    "description": "Energy levels file for the EBJT (30Si)(16O) line list",
+                                    "url": "https://exomol.com/db/SiO/30Si-16O/EBJT/30Si-16O__EBJT.states.bz2"
+                                },
+                                {
+                                    "file_name": "30Si-16O__EBJT.trans.bz2",
+                                    "description": "Transitions file for the EBJT (30Si)(16O) line list",
+                                    "url": "https://exomol.com/db/SiO/30Si-16O/EBJT/30Si-16O__EBJT.trans.bz2"
+                                },
+                                {
+                                    "file_name": "EBJT-README.txt",
+                                    "description": "Documentation for the EBJT data set of line lists and partition functions for isotopologues of SiO",
+                                    "url": "https://exomol.com/db/SiO/EBJT-README.txt"
+                                }
+                            ]
+                        },
+                        "EBJT: partition function": {
+                            "description": "Calculated line lists, energy levels and partition sums for isotopologues of SiO",
+                            "references": [
+                                "Barton, E. J., Yurchenko, S. N., Tennyson, J., \"ExoMol line lists - II. The ro-vibrational spectrum of SiO\", Monthly Notices of the Royal Astronomical Society 434, 1469-1475 (2013). [https://doi.org/10.1093/mnras/stt1105][13BaYuTe.SiO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "30Si-16O__EBJT.pf",
+                                    "description": "Partition function for the (30Si)(16O) isotopologue of SiO in the temperature range 5 - 9000 K",
+                                    "url": "https://exomol.com/db/SiO/30Si-16O/EBJT/30Si-16O__EBJT.pf"
+                                },
+                                {
+                                    "file_name": "EBJT-README.txt",
+                                    "description": "Documentation for the EBJT data set of line lists and partition functions for isotopologues of SiO",
+                                    "url": "https://exomol.com/db/SiO/EBJT-README.txt"
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "TiO": {
+            "url": "https://exomol.com/data/molecules/TiO",
+            "46Ti16O": {
+                "url": "https://exomol.com/data/molecules/TiO/46Ti-16O",
+                "Kurucz": {
+                    "url": "https://exomol.com/data/molecules/TiO/46Ti-16O/Kurucz",
+                    "recommended": false,
+                    "data": {
+                        "Kurucz: line list": {
+                            "description": "Diatomic Database of R. L. Kurucz at the Harvard-Smithsonian Center for Astrophysics",
+                            "references": [
+                                "Kurucz, R. L., \"Atomic and molecular data for opacity calculations\", Revista Mexicana de Astronomia y Astrofisica 23, 45-48 (1992). [http://adsabs.harvard.edu/abs/1992RMxAA..23...45K][92Kurucz.CN]",
+                                "Schwenke, D. W., \"Opacity of TiO from a coupled electronic state calculation parametrized by ab initio and experimental data\", Faraday Discussions 109, 321-334 (1998). [http://dx.doi.org/10.1039/a800070k][09Schwenke.TiO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "46Ti-16O__Kurucz.trans.bz2",
+                                    "description": "Kurucz's (46Ti)(16O) line list: Transition file. The line list has been computed by David W. Schwenke (NASA AMES). The ExoMol format has been compiled by Zhang, Zhaoxi M. (Michael), mz@astro.caltech.edu. http://kurucz.harvard.edu/molecules/tio/",
+                                    "url": "https://exomol.com/db/TiO/46Ti-16O/Kurucz/46Ti-16O__Kurucz.trans.bz2"
+                                },
+                                {
+                                    "file_name": "46Ti-16O__Kurucz.states.bz2",
+                                    "description": "Kurucz's (46Ti)(16O) line list: States file, computed by D. W. Schwenke and compiled by M. Zhang",
+                                    "url": "https://exomol.com/db/TiO/46Ti-16O/Kurucz/46Ti-16O__Kurucz.states.bz2"
+                                }
+                            ]
+                        },
+                        "Kurucz: partition function": {
+                            "description": "Diatomic Database of R. L. Kurucz at the Harvard-Smithsonian Center for Astrophysics",
+                            "references": [
+                                "Kurucz, R. L., \"Atomic and molecular data for opacity calculations\", Revista Mexicana de Astronomia y Astrofisica 23, 45-48 (1992). [http://adsabs.harvard.edu/abs/1992RMxAA..23...45K][92Kurucz.CN]",
+                                "Schwenke, D. W., \"Opacity of TiO from a coupled electronic state calculation parametrized by ab initio and experimental data\", Faraday Discussions 109, 321-334 (1998). [http://dx.doi.org/10.1039/a800070k][09Schwenke.TiO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "46Ti-16O__Kurucz.pf",
+                                    "description": "Partition function of (46Ti)(16O) computed from Kurucz's line list",
+                                    "url": "https://exomol.com/db/TiO/46Ti-16O/Kurucz/46Ti-16O__Kurucz.pf"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "Toto": {
+                    "url": "https://exomol.com/data/molecules/TiO/46Ti-16O/Toto",
+                    "recommended": true,
+                    "data": {
+                        "Definitions file": {
+                            "url": "https://exomol.com/db/TiO/46Ti-16O/Toto/46Ti-16O__Toto.def"
+                        },
+                        "Spectroscopic Model": {
+                            "url": "https://exomol.com/models/TiO/46Ti-16O/Toto/"
+                        },
+                        "Toto: line list": {
+                            "description": "An empirical line list for TiO covering 13 lowest electronic states.",
+                            "references": [
+                                "McKemmish, L. K., Masseron, T., Hoeijmakers, H. J., Perez-Mesa, V., Grimm, S. L., Yurchenko, S. N., Tennyson, J., \"ExoMol Molecular linelists - XXXIII. The spectrum of Titanium Oxide\", Monthly Notices of the Royal Astronomical Society 488, 2836-2854 (2019). [https://doi.org/10.1093/mnras/stz1818][19McMaHo.TiO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "46Ti-16O__Toto.states.bz2",
+                                    "description": "The Toto line list for (46Ti)(16O): States file.",
+                                    "url": "https://exomol.com/db/TiO/46Ti-16O/Toto/46Ti-16O__Toto.states.bz2"
+                                },
+                                {
+                                    "file_name": "46Ti-16O__Toto.trans.bz2",
+                                    "description": "The Toto line list for (46Ti)(16O): Transitions file.",
+                                    "url": "https://exomol.com/db/TiO/46Ti-16O/Toto/46Ti-16O__Toto.trans.bz2"
+                                }
+                            ]
+                        },
+                        "Toto: partition function": {
+                            "description": "An empirical line list for TiO covering 13 lowest electronic states.",
+                            "references": [
+                                "McKemmish, L. K., Masseron, T., Hoeijmakers, H. J., Perez-Mesa, V., Grimm, S. L., Yurchenko, S. N., Tennyson, J., \"ExoMol Molecular linelists - XXXIII. The spectrum of Titanium Oxide\", Monthly Notices of the Royal Astronomical Society 488, 2836-2854 (2019). [https://doi.org/10.1093/mnras/stz1818][19McMaHo.TiO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "46Ti-16O__Toto.pf",
+                                    "description": "The Toto line list for (46Ti)(16O): Partition function file.",
+                                    "url": "https://exomol.com/db/TiO/46Ti-16O/Toto/46Ti-16O__Toto.pf"
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            "47Ti16O": {
+                "url": "https://exomol.com/data/molecules/TiO/47Ti-16O",
+                "Kurucz": {
+                    "url": "https://exomol.com/data/molecules/TiO/47Ti-16O/Kurucz",
+                    "recommended": false,
+                    "data": {
+                        "Kurucz: line list": {
+                            "description": "Diatomic Database of R. L. Kurucz at the Harvard-Smithsonian Center for Astrophysics",
+                            "references": [
+                                "Kurucz, R. L., \"Atomic and molecular data for opacity calculations\", Revista Mexicana de Astronomia y Astrofisica 23, 45-48 (1992). [http://adsabs.harvard.edu/abs/1992RMxAA..23...45K][92Kurucz.CN]",
+                                "Schwenke, D. W., \"Opacity of TiO from a coupled electronic state calculation parametrized by ab initio and experimental data\", Faraday Discussions 109, 321-334 (1998). [http://dx.doi.org/10.1039/a800070k][09Schwenke.TiO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "47Ti-16O__Kurucz.trans.bz2",
+                                    "description": "Kurucz's (47Ti)(16O) line list: Transition file. The line list has been computed by David W. Schwenke (NASA AMES). The ExoMol format has been compiled by Zhang, Zhaoxi M. (Michael), mz@astro.caltech.edu. http://kurucz.harvard.edu/molecules/tio/",
+                                    "url": "https://exomol.com/db/TiO/47Ti-16O/Kurucz/47Ti-16O__Kurucz.trans.bz2"
+                                },
+                                {
+                                    "file_name": "47Ti-16O__Kurucz.states.bz2",
+                                    "description": "Kurucz's (47Ti)(16O) line list: States file, computed by D. W. Schwenke and compiled by M. Zhang",
+                                    "url": "https://exomol.com/db/TiO/47Ti-16O/Kurucz/47Ti-16O__Kurucz.states.bz2"
+                                }
+                            ]
+                        },
+                        "Kurucz: partition function": {
+                            "description": "Diatomic Database of R. L. Kurucz at the Harvard-Smithsonian Center for Astrophysics",
+                            "references": [
+                                "Kurucz, R. L., \"Atomic and molecular data for opacity calculations\", Revista Mexicana de Astronomia y Astrofisica 23, 45-48 (1992). [http://adsabs.harvard.edu/abs/1992RMxAA..23...45K][92Kurucz.CN]",
+                                "Schwenke, D. W., \"Opacity of TiO from a coupled electronic state calculation parametrized by ab initio and experimental data\", Faraday Discussions 109, 321-334 (1998). [http://dx.doi.org/10.1039/a800070k][09Schwenke.TiO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "47Ti-16O__Kurucz.pf",
+                                    "description": "Partition function of (47Ti)(16O) computed from Kurucz's line list",
+                                    "url": "https://exomol.com/db/TiO/47Ti-16O/Kurucz/47Ti-16O__Kurucz.pf"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "Toto": {
+                    "url": "https://exomol.com/data/molecules/TiO/47Ti-16O/Toto",
+                    "recommended": true,
+                    "data": {
+                        "Definitions file": {
+                            "url": "https://exomol.com/db/TiO/47Ti-16O/Toto/47Ti-16O__Toto.def"
+                        },
+                        "Spectroscopic Model": {
+                            "url": "https://exomol.com/models/TiO/47Ti-16O/Toto/"
+                        },
+                        "Toto: line list": {
+                            "description": "An empirical line list for TiO covering 13 lowest electronic states.",
+                            "references": [
+                                "McKemmish, L. K., Masseron, T., Hoeijmakers, H. J., Perez-Mesa, V., Grimm, S. L., Yurchenko, S. N., Tennyson, J., \"ExoMol Molecular linelists - XXXIII. The spectrum of Titanium Oxide\", Monthly Notices of the Royal Astronomical Society 488, 2836-2854 (2019). [https://doi.org/10.1093/mnras/stz1818][19McMaHo.TiO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "47Ti-16O__Toto.states.bz2",
+                                    "description": "The Toto line list for (47Ti)(16O): States file.",
+                                    "url": "https://exomol.com/db/TiO/47Ti-16O/Toto/47Ti-16O__Toto.states.bz2"
+                                },
+                                {
+                                    "file_name": "47Ti-16O__Toto.trans.bz2",
+                                    "description": "The Toto line list for (47Ti)(16O): Transitions file.",
+                                    "url": "https://exomol.com/db/TiO/47Ti-16O/Toto/47Ti-16O__Toto.trans.bz2"
+                                }
+                            ]
+                        },
+                        "Toto: partition function": {
+                            "description": "An empirical line list for TiO covering 13 lowest electronic states.",
+                            "references": [
+                                "McKemmish, L. K., Masseron, T., Hoeijmakers, H. J., Perez-Mesa, V., Grimm, S. L., Yurchenko, S. N., Tennyson, J., \"ExoMol Molecular linelists - XXXIII. The spectrum of Titanium Oxide\", Monthly Notices of the Royal Astronomical Society 488, 2836-2854 (2019). [https://doi.org/10.1093/mnras/stz1818][19McMaHo.TiO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "47Ti-16O__Toto.pf",
+                                    "description": "The Toto line list for (47Ti)(16O): Partition function file.",
+                                    "url": "https://exomol.com/db/TiO/47Ti-16O/Toto/47Ti-16O__Toto.pf"
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            "48Ti16O": {
+                "url": "https://exomol.com/data/molecules/TiO/48Ti-16O",
+                "xsec-Toto": {
+                    "url": "https://exomol.com/data/molecules/TiO/48Ti-16O/xsec-Toto",
+                    "recommended": false,
+                    "data": {
+                        "xsec-Toto: cross section": {
+                            "description": "Online absorption cross section service: this 48Ti16O cross section has been generated from the line list Toto [McKemmish, 2019] using the procedure described in [Hill et al. (2013)].",
+                            "references": [
+                                "McKemmish, L. K., Masseron, T., Hoeijmakers, H. J., Perez-Mesa, V., Grimm, S. L., Yurchenko, S. N., Tennyson, J., \"ExoMol Molecular linelists - XXXIII. The spectrum of Titanium Oxide\", Monthly Notices of the Royal Astronomical Society 488, 2836-2854 (2019). [https://doi.org/10.1093/mnras/stz1818][19McMaHo.TiO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "48Ti-16O",
+                                    "description": "Absorption cross section service for (48Ti)(16O)",
+                                    "url": "https://exomol.com/xsec/48Ti-16O"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "Kurucz": {
+                    "url": "https://exomol.com/data/molecules/TiO/48Ti-16O/Kurucz",
+                    "recommended": false,
+                    "data": {
+                        "Kurucz: line list": {
+                            "description": "Diatomic Database of R. L. Kurucz at the Harvard-Smithsonian Center for Astrophysics",
+                            "references": [
+                                "Kurucz, R. L., \"Atomic and molecular data for opacity calculations\", Revista Mexicana de Astronomia y Astrofisica 23, 45-48 (1992). [http://adsabs.harvard.edu/abs/1992RMxAA..23...45K][92Kurucz.CN]",
+                                "Schwenke, D. W., \"Opacity of TiO from a coupled electronic state calculation parametrized by ab initio and experimental data\", Faraday Discussions 109, 321-334 (1998). [http://dx.doi.org/10.1039/a800070k][09Schwenke.TiO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "48Ti-16O__Kurucz.trans.bz2",
+                                    "description": "Kurucz's (48Ti)(16O) line list: Transition file. The line list has been computed by David W. Schwenke (NASA AMES). The ExoMol format has been compiled by Zhang, Zhaoxi M. (Michael), mz@astro.caltech.edu. http://kurucz.harvard.edu/molecules/tio/",
+                                    "url": "https://exomol.com/db/TiO/48Ti-16O/Kurucz/48Ti-16O__Kurucz.trans.bz2"
+                                },
+                                {
+                                    "file_name": "48Ti-16O__Kurucz.states.bz2",
+                                    "description": "Kurucz's (48Ti)(16O) line list: States file, computed by D. W. Schwenke and compiled by M. Zhang",
+                                    "url": "https://exomol.com/db/TiO/48Ti-16O/Kurucz/48Ti-16O__Kurucz.states.bz2"
+                                }
+                            ]
+                        },
+                        "Kurucz: partition function": {
+                            "description": "Diatomic Database of R. L. Kurucz at the Harvard-Smithsonian Center for Astrophysics",
+                            "references": [
+                                "Kurucz, R. L., \"Atomic and molecular data for opacity calculations\", Revista Mexicana de Astronomia y Astrofisica 23, 45-48 (1992). [http://adsabs.harvard.edu/abs/1992RMxAA..23...45K][92Kurucz.CN]",
+                                "Schwenke, D. W., \"Opacity of TiO from a coupled electronic state calculation parametrized by ab initio and experimental data\", Faraday Discussions 109, 321-334 (1998). [http://dx.doi.org/10.1039/a800070k][09Schwenke.TiO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "48Ti-16O__Kurucz.pf",
+                                    "description": "Partition function of (48Ti)(16O) computed from Kurucz's line list",
+                                    "url": "https://exomol.com/db/TiO/48Ti-16O/Kurucz/48Ti-16O__Kurucz.pf"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "Toto": {
+                    "url": "https://exomol.com/data/molecules/TiO/48Ti-16O/Toto",
+                    "recommended": true,
+                    "data": {
+                        "Definitions file": {
+                            "url": "https://exomol.com/db/TiO/48Ti-16O/Toto/48Ti-16O__Toto.def"
+                        },
+                        "Spectroscopic Model": {
+                            "url": "https://exomol.com/models/TiO/48Ti-16O/Toto/"
+                        },
+                        "Spectrum overview": {
+                            "url": "/media/uploads/spectrum-images/48Ti-16O__Toto__spectrum.png"
+                        },
+                        "Toto: line list": {
+                            "description": "An empirical line list for TiO covering 13 lowest electronic states.",
+                            "references": [
+                                "McKemmish, L. K., Masseron, T., Hoeijmakers, H. J., Perez-Mesa, V., Grimm, S. L., Yurchenko, S. N., Tennyson, J., \"ExoMol Molecular linelists - XXXIII. The spectrum of Titanium Oxide\", Monthly Notices of the Royal Astronomical Society 488, 2836-2854 (2019). [https://doi.org/10.1093/mnras/stz1818][19McMaHo.TiO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "48Ti-16O__Toto.states.bz2",
+                                    "description": "The Toto line list for (48Ti)(16O): States file. Marvelisation of a1Delta and e1Sigma+ updated on 25.08.2021",
+                                    "url": "https://exomol.com/db/TiO/48Ti-16O/Toto/48Ti-16O__Toto.states.bz2"
+                                },
+                                {
+                                    "file_name": "48Ti-16O__Toto.trans.bz2",
+                                    "description": "The Toto line list for (48Ti)(16O): Transitions file.",
+                                    "url": "https://exomol.com/db/TiO/48Ti-16O/Toto/48Ti-16O__Toto.trans.bz2"
+                                }
+                            ]
+                        },
+                        "Toto: partition function": {
+                            "description": "An empirical line list for TiO covering 13 lowest electronic states.",
+                            "references": [
+                                "McKemmish, L. K., Masseron, T., Hoeijmakers, H. J., Perez-Mesa, V., Grimm, S. L., Yurchenko, S. N., Tennyson, J., \"ExoMol Molecular linelists - XXXIII. The spectrum of Titanium Oxide\", Monthly Notices of the Royal Astronomical Society 488, 2836-2854 (2019). [https://doi.org/10.1093/mnras/stz1818][19McMaHo.TiO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "48Ti-16O__Toto.pf",
+                                    "description": "The Toto line list for (48Ti)(16O): Partition function file.",
+                                    "url": "https://exomol.com/db/TiO/48Ti-16O/Toto/48Ti-16O__Toto.pf"
+                                }
+                            ]
+                        },
+                        "Toto: opacity": {
+                            "description": "An empirical line list for TiO covering 13 lowest electronic states.",
+                            "references": [
+                                "McKemmish, L. K., Masseron, T., Hoeijmakers, H. J., Perez-Mesa, V., Grimm, S. L., Yurchenko, S. N., Tennyson, J., \"ExoMol Molecular linelists - XXXIII. The spectrum of Titanium Oxide\", Monthly Notices of the Royal Astronomical Society 488, 2836-2854 (2019). [https://doi.org/10.1093/mnras/stz1818][19McMaHo.TiO]",
+                                "Chubb, K. L., Rocchetto, M., Yurchenko, S. N., Min, M., Waldmann, I., Barstow, J. K., Molliere, P., Al-Refaie, A. F, Phillips, M. W., Tennyson, J., \"The ExoMolOP database: Cross sections and k-tables for molecules of interest in high-temperature exoplanet atmospheres\", Astronomy and Astrophysics 646, A21 (2020). [http://dx.doi.org/10.1051/0004-6361/202038350][20ChRoYu.]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "48Ti-16O__Toto.R1000_0.3-50mu.ktable.ARCiS.fits.gz",
+                                    "description": "ARCiS k-tables at R= 1000 (0.3-50mu) in fits format (gzipped): Toto (48Ti)(16O) line list.",
+                                    "url": "https://exomol.com/db/TiO/48Ti-16O/Toto/48Ti-16O__Toto.R1000_0.3-50mu.ktable.ARCiS.fits.gz"
+                                },
+                                {
+                                    "file_name": "48Ti-16O__Toto.R1000_0.3-50mu.ktable.petitRADTRANS.h5",
+                                    "description": "petitRADTRANS k-tables at R= 1000 (0.3-50mu) in HDF5 format: Toto (48Ti)(16O) line list.",
+                                    "url": "https://exomol.com/db/TiO/48Ti-16O/Toto/48Ti-16O__Toto.R1000_0.3-50mu.ktable.petitRADTRANS.h5"
+                                },
+                                {
+                                    "file_name": "48Ti-16O__Toto.R1000_0.3-50mu.ktable.NEMESIS.kta",
+                                    "description": "NEMESIS k-tables at R= 1000 (0.3-50mu) in NEMESIS-kta format: Toto (48Ti)(16O) line list.",
+                                    "url": "https://exomol.com/db/TiO/48Ti-16O/Toto/48Ti-16O__Toto.R1000_0.3-50mu.ktable.NEMESIS.kta"
+                                },
+                                {
+                                    "file_name": "48Ti-16O__Toto.R15000_0.3-50mu.xsec.TauREx.h5",
+                                    "description": "TauREx k-tables at R= 15000 (0.3-50mu) in HDF5 format: Toto (48Ti)(16O) line list.",
+                                    "url": "https://exomol.com/db/TiO/48Ti-16O/Toto/48Ti-16O__Toto.R15000_0.3-50mu.xsec.TauREx.h5"
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            "49Ti16O": {
+                "url": "https://exomol.com/data/molecules/TiO/49Ti-16O",
+                "Toto": {
+                    "url": "https://exomol.com/data/molecules/TiO/49Ti-16O/Toto",
+                    "recommended": true,
+                    "data": {
+                        "Definitions file": {
+                            "url": "https://exomol.com/db/TiO/49Ti-16O/Toto/49Ti-16O__Toto.def"
+                        },
+                        "Spectroscopic Model": {
+                            "url": "https://exomol.com/models/TiO/49Ti-16O/Toto/"
+                        },
+                        "Toto: line list": {
+                            "description": "An empirical line list for TiO covering 13 lowest electronic states.",
+                            "references": [
+                                "McKemmish, L. K., Masseron, T., Hoeijmakers, H. J., Perez-Mesa, V., Grimm, S. L., Yurchenko, S. N., Tennyson, J., \"ExoMol Molecular linelists - XXXIII. The spectrum of Titanium Oxide\", Monthly Notices of the Royal Astronomical Society 488, 2836-2854 (2019). [https://doi.org/10.1093/mnras/stz1818][19McMaHo.TiO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "49Ti-16O__Toto.states.bz2",
+                                    "description": "The Toto line list for (49Ti)(16O): States file.",
+                                    "url": "https://exomol.com/db/TiO/49Ti-16O/Toto/49Ti-16O__Toto.states.bz2"
+                                },
+                                {
+                                    "file_name": "49Ti-16O__Toto.trans.bz2",
+                                    "description": "The Toto line list for (49Ti)(16O): Transitions file.",
+                                    "url": "https://exomol.com/db/TiO/49Ti-16O/Toto/49Ti-16O__Toto.trans.bz2"
+                                }
+                            ]
+                        },
+                        "Toto: partition function": {
+                            "description": "An empirical line list for TiO covering 13 lowest electronic states.",
+                            "references": [
+                                "McKemmish, L. K., Masseron, T., Hoeijmakers, H. J., Perez-Mesa, V., Grimm, S. L., Yurchenko, S. N., Tennyson, J., \"ExoMol Molecular linelists - XXXIII. The spectrum of Titanium Oxide\", Monthly Notices of the Royal Astronomical Society 488, 2836-2854 (2019). [https://doi.org/10.1093/mnras/stz1818][19McMaHo.TiO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "49Ti-16O__Toto.pf",
+                                    "description": "The Toto line list for (49Ti)(16O): Partition function file.",
+                                    "url": "https://exomol.com/db/TiO/49Ti-16O/Toto/49Ti-16O__Toto.pf"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "Kurucz": {
+                    "url": "https://exomol.com/data/molecules/TiO/49Ti-16O/Kurucz",
+                    "recommended": false,
+                    "data": {
+                        "Kurucz: line list (external)": {
+                            "description": "Diatomic Database of R. L. Kurucz at the Harvard-Smithsonian Center for Astrophysics",
+                            "references": [
+                                "Kurucz, R. L., \"Atomic and molecular data for opacity calculations\", Revista Mexicana de Astronomia y Astrofisica 23, 45-48 (1992). [http://adsabs.harvard.edu/abs/1992RMxAA..23...45K][92Kurucz.CN]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "http://kurucz.harvard.edu/molecules/tio/",
+                                    "description": "Kurucz database TiO line list",
+                                    "url": "http://kurucz.harvard.edu/molecules/tio/"
+                                }
+                            ]
+                        },
+                        "Kurucz: line list": {
+                            "description": "Diatomic Database of R. L. Kurucz at the Harvard-Smithsonian Center for Astrophysics",
+                            "references": [
+                                "Kurucz, R. L., \"Atomic and molecular data for opacity calculations\", Revista Mexicana de Astronomia y Astrofisica 23, 45-48 (1992). [http://adsabs.harvard.edu/abs/1992RMxAA..23...45K][92Kurucz.CN]",
+                                "Schwenke, D. W., \"Opacity of TiO from a coupled electronic state calculation parametrized by ab initio and experimental data\", Faraday Discussions 109, 321-334 (1998). [http://dx.doi.org/10.1039/a800070k][09Schwenke.TiO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "49Ti-16O__Kurucz.trans.bz2",
+                                    "description": "Kurucz's (49Ti)(16O) line list: Transition file. The line list has been computed by David W. Schwenke (NASA AMES). The ExoMol format has been compiled by Zhang, Zhaoxi M. (Michael), mz@astro.caltech.edu. http://kurucz.harvard.edu/molecules/tio/",
+                                    "url": "https://exomol.com/db/TiO/49Ti-16O/Kurucz/49Ti-16O__Kurucz.trans.bz2"
+                                },
+                                {
+                                    "file_name": "49Ti-16O__Kurucz.states.bz2",
+                                    "description": "Kurucz's (49Ti)(16O) line list: States file, computed by D. W. Schwenke and compiled by M. Zhang",
+                                    "url": "https://exomol.com/db/TiO/49Ti-16O/Kurucz/49Ti-16O__Kurucz.states.bz2"
+                                }
+                            ]
+                        },
+                        "Kurucz: partition function": {
+                            "description": "Diatomic Database of R. L. Kurucz at the Harvard-Smithsonian Center for Astrophysics",
+                            "references": [
+                                "Kurucz, R. L., \"Atomic and molecular data for opacity calculations\", Revista Mexicana de Astronomia y Astrofisica 23, 45-48 (1992). [http://adsabs.harvard.edu/abs/1992RMxAA..23...45K][92Kurucz.CN]",
+                                "Schwenke, D. W., \"Opacity of TiO from a coupled electronic state calculation parametrized by ab initio and experimental data\", Faraday Discussions 109, 321-334 (1998). [http://dx.doi.org/10.1039/a800070k][09Schwenke.TiO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "49Ti-16O__Kurucz.pf",
+                                    "description": "Partition function of (49Ti)(16O) computed from Kurucz's line list",
+                                    "url": "https://exomol.com/db/TiO/49Ti-16O/Kurucz/49Ti-16O__Kurucz.pf"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "xsec-Schwenke": {
+                    "url": "https://exomol.com/data/molecules/TiO/49Ti-16O/xsec-Schwenke",
+                    "recommended": false,
+                    "data": {
+                        "xsec-Schwenke: cross section": {
+                            "description": "Online absorption cross section service: this 48Ti16O cross section has been generated from the line list of David Schwenke (1998) for the ExoMol project [Tennyson and Yurchenko (2012)] using the procedure described in [Hill et al. (2013)].",
+                            "references": [
+                                "Hill, C., Yurchenko, S. N., Tennyson, J., \"Temperature-dependent molecular absorption cross sections for exoplanets and other atmospheres\", Icarus 226, 1673-1677 (2013). [http://www.sciencedirect.com/science/article/pii/S0019103512003041][13HiYuTe.SO2]",
+                                "Tennyson, J., Yurchenko, S. N., \"ExoMol: molecular line lists for exoplanet and other atmospheres\", Monthly Notices of the Royal Astronomical Society 425, 21-33 (2012). [https://doi.org/10.1111/j.1365-2966.2012.21440.x][12TeYuxx]",
+                                "Schwenke, D. W., \"Opacity of TiO from a coupled electronic state calculation parametrized by ab initio and experimental data\", Faraday Discussions 109, 321-334 (1998). [http://dx.doi.org/10.1039/a800070k][09Schwenke.TiO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "48Ti-16O",
+                                    "description": "Absorption cross section service for (48Ti)(16O)",
+                                    "url": "https://exomol.com/xsec/48Ti-16O"
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            "50Ti16O": {
+                "url": "https://exomol.com/data/molecules/TiO/50Ti-16O",
+                "Kurucz": {
+                    "url": "https://exomol.com/data/molecules/TiO/50Ti-16O/Kurucz",
+                    "recommended": false,
+                    "data": {
+                        "Kurucz: line list": {
+                            "description": "Diatomic Database of R. L. Kurucz at the Harvard-Smithsonian Center for Astrophysics",
+                            "references": [
+                                "Kurucz, R. L., \"Atomic and molecular data for opacity calculations\", Revista Mexicana de Astronomia y Astrofisica 23, 45-48 (1992). [http://adsabs.harvard.edu/abs/1992RMxAA..23...45K][92Kurucz.CN]",
+                                "Schwenke, D. W., \"Opacity of TiO from a coupled electronic state calculation parametrized by ab initio and experimental data\", Faraday Discussions 109, 321-334 (1998). [http://dx.doi.org/10.1039/a800070k][09Schwenke.TiO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "50Ti-16O__Kurucz.trans.bz2",
+                                    "description": "Kurucz's (50Ti)(16O) line list: Transition file. The line list has been computed by David W. Schwenke (NASA AMES). The ExoMol format has been compiled by Zhang, Zhaoxi M. (Michael), mz@astro.caltech.edu. http://kurucz.harvard.edu/molecules/tio/",
+                                    "url": "https://exomol.com/db/TiO/50Ti-16O/Kurucz/50Ti-16O__Kurucz.trans.bz2"
+                                },
+                                {
+                                    "file_name": "50Ti-16O__Kurucz.states.bz2",
+                                    "description": "Kurucz's (50Ti)(16O) line list: States file, computed by D. W. Schwenke and compiled by M. Zhang",
+                                    "url": "https://exomol.com/db/TiO/50Ti-16O/Kurucz/50Ti-16O__Kurucz.states.bz2"
+                                }
+                            ]
+                        },
+                        "Kurucz: partition function": {
+                            "description": "Diatomic Database of R. L. Kurucz at the Harvard-Smithsonian Center for Astrophysics",
+                            "references": [
+                                "Kurucz, R. L., \"Atomic and molecular data for opacity calculations\", Revista Mexicana de Astronomia y Astrofisica 23, 45-48 (1992). [http://adsabs.harvard.edu/abs/1992RMxAA..23...45K][92Kurucz.CN]",
+                                "Schwenke, D. W., \"Opacity of TiO from a coupled electronic state calculation parametrized by ab initio and experimental data\", Faraday Discussions 109, 321-334 (1998). [http://dx.doi.org/10.1039/a800070k][09Schwenke.TiO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "50Ti-16O__Kurucz.pf",
+                                    "description": "Partition function of (50Ti)(16O) computed from Kurucz's line list",
+                                    "url": "https://exomol.com/db/TiO/50Ti-16O/Kurucz/50Ti-16O__Kurucz.pf"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "Toto": {
+                    "url": "https://exomol.com/data/molecules/TiO/50Ti-16O/Toto",
+                    "recommended": true,
+                    "data": {
+                        "Definitions file": {
+                            "url": "https://exomol.com/db/TiO/50Ti-16O/Toto/50Ti-16O__Toto.def"
+                        },
+                        "Spectroscopic Model": {
+                            "url": "https://exomol.com/models/TiO/50Ti-16O/Toto/"
+                        },
+                        "Toto: line list": {
+                            "description": "An empirical line list for TiO covering 13 lowest electronic states.",
+                            "references": [
+                                "McKemmish, L. K., Masseron, T., Hoeijmakers, H. J., Perez-Mesa, V., Grimm, S. L., Yurchenko, S. N., Tennyson, J., \"ExoMol Molecular linelists - XXXIII. The spectrum of Titanium Oxide\", Monthly Notices of the Royal Astronomical Society 488, 2836-2854 (2019). [https://doi.org/10.1093/mnras/stz1818][19McMaHo.TiO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "50Ti-16O__Toto.states.bz2",
+                                    "description": "The Toto line list for (50Ti)(16O): States file.",
+                                    "url": "https://exomol.com/db/TiO/50Ti-16O/Toto/50Ti-16O__Toto.states.bz2"
+                                },
+                                {
+                                    "file_name": "50Ti-16O__Toto.trans.bz2",
+                                    "description": "The Toto line list for (50Ti)(16O): Transitions file.",
+                                    "url": "https://exomol.com/db/TiO/50Ti-16O/Toto/50Ti-16O__Toto.trans.bz2"
+                                }
+                            ]
+                        },
+                        "Toto: partition function": {
+                            "description": "An empirical line list for TiO covering 13 lowest electronic states.",
+                            "references": [
+                                "McKemmish, L. K., Masseron, T., Hoeijmakers, H. J., Perez-Mesa, V., Grimm, S. L., Yurchenko, S. N., Tennyson, J., \"ExoMol Molecular linelists - XXXIII. The spectrum of Titanium Oxide\", Monthly Notices of the Royal Astronomical Society 488, 2836-2854 (2019). [https://doi.org/10.1093/mnras/stz1818][19McMaHo.TiO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "50Ti-16O__Toto.pf",
+                                    "description": "The Toto line list for (50Ti)(16O): Partition function file.",
+                                    "url": "https://exomol.com/db/TiO/50Ti-16O/Toto/50Ti-16O__Toto.pf"
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "VO": {
+            "url": "https://exomol.com/data/molecules/VO",
+            "51V16O": {
+                "url": "https://exomol.com/data/molecules/VO/51V-16O",
+                "xsec-VOMYT": {
+                    "url": "https://exomol.com/data/molecules/VO/51V-16O/xsec-VOMYT",
+                    "recommended": false,
+                    "data": {
+                        "xsec-VOMYT: cross section": {
+                            "description": "Online absorption cross section service: this VO cross section has been generated from data in the VOMYT calculated line list for the ExoMol project [Tennyson and Yurchenko (2012)] using the procedure described in [Hill et al. (2013)].",
+                            "references": [
+                                "McKemmish, L. K., Yurchenko, S. N., Tennyson, J., \"ExoMol line lists XVIII \u2013 The high temperature spectrum of VO\", Monthly Notices of the Royal Astronomical Society 463, 771-793 (2016). [http://dx.doi.org/10.1093/mnras/stw1969][16McYuTe.VO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "51V-16O",
+                                    "description": "Absorption cross section service for VO.",
+                                    "url": "https://exomol.com/xsec/51V-16O"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "VOMYT": {
+                    "url": "https://exomol.com/data/molecules/VO/51V-16O/VOMYT",
+                    "recommended": true,
+                    "data": {
+                        "Definitions file": {
+                            "url": "https://exomol.com/db/VO/51V-16O/VOMYT/51V-16O__VOMYT.def"
+                        },
+                        "Spectroscopic Model": {
+                            "url": "https://exomol.com/models/VO/51V-16O/VOMYT/"
+                        },
+                        "Spectrum overview": {
+                            "url": "/media/uploads/spectrum-images/51V-16O__VOMYT__spectrum.png"
+                        },
+                        "VOMYT: partition function": {
+                            "description": "New VO Linelist, utilising a spectroscopic model with the 13 lowest electronic states.",
+                            "references": [
+                                "McKemmish, L. K., Yurchenko, S. N., Tennyson, J., \"ExoMol line lists XVIII \u2013 The high temperature spectrum of VO\", Monthly Notices of the Royal Astronomical Society 463, 771-793 (2016). [http://dx.doi.org/10.1093/mnras/stw1969][16McYuTe.VO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "51V-16O__VOMYT.pf",
+                                    "description": "Partition function for (51V)(16O) in the temperature range 1 \u2013 8000 K in 1 K steps from the VOMYT data set.",
+                                    "url": "https://exomol.com/db/VO/51V-16O/VOMYT/51V-16O__VOMYT.pf"
+                                }
+                            ]
+                        },
+                        "VOMYT: line list": {
+                            "description": "New VO Linelist, utilising a spectroscopic model with the 13 lowest electronic states.",
+                            "references": [
+                                "McKemmish, L. K., Yurchenko, S. N., Tennyson, J., \"ExoMol line lists XVIII \u2013 The high temperature spectrum of VO\", Monthly Notices of the Royal Astronomical Society 463, 771-793 (2016). [http://dx.doi.org/10.1093/mnras/stw1969][16McYuTe.VO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "51V-16O__VOMYT.readme",
+                                    "description": "README documentation for the VOMYT data set for (51V)(16O)",
+                                    "url": "https://exomol.com/db/VO/51V-16O/VOMYT/51V-16O__VOMYT.readme"
+                                },
+                                {
+                                    "file_name": "51V-16O__VOMYT.states.bz2",
+                                    "description": "States file for the VOMYT linelist for (51V)(16O)",
+                                    "url": "https://exomol.com/db/VO/51V-16O/VOMYT/51V-16O__VOMYT.states.bz2"
+                                },
+                                {
+                                    "file_name": "51V-16O__VOMYT__00000-05000.trans.bz2",
+                                    "description": "Transitions file in the region 0 \u2013 5000 cm-1 for the VOMYT linelist for (51V)(16O)",
+                                    "url": "https://exomol.com/db/VO/51V-16O/VOMYT/51V-16O__VOMYT__00000-05000.trans.bz2"
+                                },
+                                {
+                                    "file_name": "51V-16O__VOMYT__05000-10000.trans.bz2",
+                                    "description": "Transitions file in the region 5000 \u2013 10000 cm-1 for the VOMYT linelist for (51V)(16O)",
+                                    "url": "https://exomol.com/db/VO/51V-16O/VOMYT/51V-16O__VOMYT__05000-10000.trans.bz2"
+                                },
+                                {
+                                    "file_name": "51V-16O__VOMYT__10000-15000.trans.bz2",
+                                    "description": "Transitions file in the region 10000 \u2013 15000 cm-1 for the VOMYT linelist for (51V)(16O)",
+                                    "url": "https://exomol.com/db/VO/51V-16O/VOMYT/51V-16O__VOMYT__10000-15000.trans.bz2"
+                                },
+                                {
+                                    "file_name": "51V-16O__VOMYT__15000-20000.trans.bz2",
+                                    "description": "Transitions file in the region 15000 \u2013 20000 cm-1 for the VOMYT linelist for (51V)(16O)",
+                                    "url": "https://exomol.com/db/VO/51V-16O/VOMYT/51V-16O__VOMYT__15000-20000.trans.bz2"
+                                },
+                                {
+                                    "file_name": "51V-16O__VOMYT__20000-25000.trans.bz2",
+                                    "description": "Transitions file in the region 20000 \u2013 25000 cm-1 for the VOMYT linelist for (51V)(16O)",
+                                    "url": "https://exomol.com/db/VO/51V-16O/VOMYT/51V-16O__VOMYT__20000-25000.trans.bz2"
+                                },
+                                {
+                                    "file_name": "51V-16O__VOMYT__25000-30000.trans.bz2",
+                                    "description": "Transitions file in the region 25000 \u2013 30000 cm-1 for the VOMYT linelist of (51V)(16O)",
+                                    "url": "https://exomol.com/db/VO/51V-16O/VOMYT/51V-16O__VOMYT__25000-30000.trans.bz2"
+                                },
+                                {
+                                    "file_name": "51V-16O__VOMYT__30000-35000.trans.bz2",
+                                    "description": "Transitions file in the region 30000 \u2013 35000 cm-1 for the VOMYT linelist for (51V)(16O)",
+                                    "url": "https://exomol.com/db/VO/51V-16O/VOMYT/51V-16O__VOMYT__30000-35000.trans.bz2"
+                                }
+                            ]
+                        },
+                        "VOMYT: opacity": {
+                            "description": "New VO Linelist, utilising a spectroscopic model with the 13 lowest electronic states.",
+                            "references": [
+                                "McKemmish, L. K., Yurchenko, S. N., Tennyson, J., \"ExoMol line lists XVIII \u2013 The high temperature spectrum of VO\", Monthly Notices of the Royal Astronomical Society 463, 771-793 (2016). [http://dx.doi.org/10.1093/mnras/stw1969][16McYuTe.VO]",
+                                "Chubb, K. L., Rocchetto, M., Yurchenko, S. N., Min, M., Waldmann, I., Barstow, J. K., Molliere, P., Al-Refaie, A. F, Phillips, M. W., Tennyson, J., \"The ExoMolOP database: Cross sections and k-tables for molecules of interest in high-temperature exoplanet atmospheres\", Astronomy and Astrophysics 646, A21 (2020). [http://dx.doi.org/10.1051/0004-6361/202038350][20ChRoYu.]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "51V-16O__VOMYT.R1000_0.3-50mu.ktable.ARCiS.fits.gz",
+                                    "description": "ARCiS k-tables at R= 1000 (0.3-50mu) in fits format (gzipped): VOMYT (51V)(16O) line list.",
+                                    "url": "https://exomol.com/db/VO/51V-16O/VOMYT/51V-16O__VOMYT.R1000_0.3-50mu.ktable.ARCiS.fits.gz"
+                                },
+                                {
+                                    "file_name": "51V-16O__VOMYT.R1000_0.3-50mu.ktable.petitRADTRANS.h5",
+                                    "description": "petitRADTRANS k-tables at R= 1000 (0.3-50mu) in HDF5 format: VOMYT (51V)(16O) line list.",
+                                    "url": "https://exomol.com/db/VO/51V-16O/VOMYT/51V-16O__VOMYT.R1000_0.3-50mu.ktable.petitRADTRANS.h5"
+                                },
+                                {
+                                    "file_name": "51V-16O__VOMYT.R1000_0.3-50mu.ktable.NEMESIS.kta",
+                                    "description": "NEMESIS k-tables at R= 1000 (0.3-50mu) in NEMESIS-kta format: VOMYT (51V)(16O) line list.",
+                                    "url": "https://exomol.com/db/VO/51V-16O/VOMYT/51V-16O__VOMYT.R1000_0.3-50mu.ktable.NEMESIS.kta"
+                                },
+                                {
+                                    "file_name": "51V-16O__VOMYT.R15000_0.3-50mu.xsec.TauREx.h5",
+                                    "description": "TauREx k-tables at R= 15000 (0.3-50mu) in HDF5 format: VOMYT (51V)(16O) line list.",
+                                    "url": "https://exomol.com/db/VO/51V-16O/VOMYT/51V-16O__VOMYT.R15000_0.3-50mu.xsec.TauREx.h5"
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "YO": {
+            "url": "https://exomol.com/data/molecules/YO",
+            "89Y16O": {
+                "url": "https://exomol.com/data/molecules/YO/89Y-16O",
+                "SSYT": {
+                    "url": "https://exomol.com/data/molecules/YO/89Y-16O/SSYT",
+                    "recommended": true,
+                    "data": {
+                        "Definitions file": {
+                            "url": "https://exomol.com/db/YO/89Y-16O/SSYT/89Y-16O__SSYT.def"
+                        },
+                        "Spectroscopic Model": {
+                            "url": "https://exomol.com/models/YO/89Y-16O/SSYT/"
+                        },
+                        "Spectrum overview": {
+                            "url": "/media/uploads/spectrum-images/89Y-16O__SSYT__spectrum.png"
+                        },
+                        "SSYT: line list": {
+                            "description": "SSYT line list for (89Y)(16O) obtained using ab initio model with Duo",
+                            "references": [
+                                "Smirnov, A. N, Solomonik, V. G., Yurchenko, S. N., Tennyson, J., \"Spectroscopy of YO from first principles\", Physical Chemistry Chemical Physics 21, 22794-22810 (2019). [http://dx.doi.org/10.1039/C9CP03208H][19SmSoYu.YO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "89Y-16O__SSYT.states.bz2",
+                                    "description": "States of the SSYT (89Y)(16O) rovibronic ab initio line list for the six lowest electronic states.",
+                                    "url": "https://exomol.com/db/YO/89Y-16O/SSYT/89Y-16O__SSYT.states.bz2"
+                                },
+                                {
+                                    "file_name": "89Y-16O__SSYT.trans.bz2",
+                                    "description": "Transitions of the SSYT (89Y)(16O) rovibronic ab initio line list for the six lowest electronic states.",
+                                    "url": "https://exomol.com/db/YO/89Y-16O/SSYT/89Y-16O__SSYT.trans.bz2"
+                                }
+                            ]
+                        },
+                        "SSYT: partition function": {
+                            "description": "SSYT line list for (89Y)(16O) obtained using ab initio model with Duo",
+                            "references": [
+                                "Smirnov, A. N, Solomonik, V. G., Yurchenko, S. N., Tennyson, J., \"Spectroscopy of YO from first principles\", Physical Chemistry Chemical Physics 21, 22794-22810 (2019). [http://dx.doi.org/10.1039/C9CP03208H][19SmSoYu.YO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "89Y-16O__SSYT.pf",
+                                    "description": "Partition funciton of the SSYT (89Y)(16O) rovibronic ab initio line list for the six lowest electronic states.",
+                                    "url": "https://exomol.com/db/YO/89Y-16O/SSYT/89Y-16O__SSYT.pf"
+                                }
+                            ]
+                        },
+                        "SSYT: opacity": {
+                            "description": "SSYT line list for (89Y)(16O) obtained using ab initio model with Duo",
+                            "references": [
+                                "Chubb, K. L., Rocchetto, M., Yurchenko, S. N., Min, M., Waldmann, I., Barstow, J. K., Molliere, P., Al-Refaie, A. F, Phillips, M. W., Tennyson, J., \"The ExoMolOP database: Cross sections and k-tables for molecules of interest in high-temperature exoplanet atmospheres\", Astronomy and Astrophysics 646, A21 (2020). [http://dx.doi.org/10.1051/0004-6361/202038350][20ChRoYu.]",
+                                "Smirnov, A. N, Solomonik, V. G., Yurchenko, S. N., Tennyson, J., \"Spectroscopy of YO from first principles\", Physical Chemistry Chemical Physics 21, 22794-22810 (2019). [http://dx.doi.org/10.1039/C9CP03208H][19SmSoYu.YO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "89Y-16O__SSYT.R1000_0.3-50mu.ktable.NEMESIS.kta",
+                                    "description": "NEMESIS k-tables at R= 1000 (0.3-50mu) in NEMESIS-kta format: SSYT (89Y)(16O) line list.",
+                                    "url": "https://exomol.com/db/YO/89Y-16O/SSYT/89Y-16O__SSYT.R1000_0.3-50mu.ktable.NEMESIS.kta"
+                                },
+                                {
+                                    "file_name": "89Y-16O__SSYT.R15000_0.3-50mu.xsec.TauREx.h5",
+                                    "description": "TauREx cross sections at R= 15000 (0.3-50mu) in HDF5 format: SSYT (89Y)(16O) line list.",
+                                    "url": "https://exomol.com/db/YO/89Y-16O/SSYT/89Y-16O__SSYT.R15000_0.3-50mu.xsec.TauREx.h5"
+                                },
+                                {
+                                    "file_name": "89Y-16O__SSYT.R1000_0.3-50mu.ktable.ARCiS.fits.gz",
+                                    "description": "ARCiS k-tables at R= 1000 (0.3-50mu) in fits format (gzipped): SSYT (89Y)(16O) line list.",
+                                    "url": "https://exomol.com/db/YO/89Y-16O/SSYT/89Y-16O__SSYT.R1000_0.3-50mu.ktable.ARCiS.fits.gz"
+                                },
+                                {
+                                    "file_name": "89Y-16O__SSYT.R1000_0.3-50mu.ktable.petitRADTRANS.h5",
+                                    "description": "petitRADTRANS k-tables at R= 1000 (0.3-50mu) in HDF5 format: SSYT (89Y)(16O) line list.",
+                                    "url": "https://exomol.com/db/YO/89Y-16O/SSYT/89Y-16O__SSYT.R1000_0.3-50mu.ktable.petitRADTRANS.h5"
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

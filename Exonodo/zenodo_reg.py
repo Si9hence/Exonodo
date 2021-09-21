@@ -1,6 +1,7 @@
 import requests
 import json
 import csv
+import re
 # from requests import status_codes
 # from requests_html import HTMLSession
 
@@ -32,90 +33,92 @@ def find_recommend(data: dict):
     else:
         return False
 
-
-def remove_skipped_data(data: dict, *, skips: list = ['Spectroscopic', 'Spectrum overview']):
-    """
-    The function drops the data from json archive by a skips list
-    in this case Spectroscopic and spectrum overview has been skipped
-    """
-    tmp = []
-
-    for skip in skips:
-        for item in data:
-            if skip in item:
-                tmp.append(item)
-            else:
-                pass
-    for item in tmp:
-        del data[item]
-    return data
-
-
-def keep_kept_data(data: dict, *,
-                   keeps: list = ['Definitions file', 'line list', 'partition function', 'opacity']):
-    """
-    The function keeps the data from json archive by a keeps list and drops the rest properties
-    in this case ['Definitions file', 'line list', 'partition function', 'opacity'] has been dropped
-    """
-    tmp = []
-    for keep in keeps:
-        for item in data:
-            if keep in data:
-                tmp.append(item)
-            else:
-                pass
-
-    for item in data:
-        if item not in tmp:
-            del data[item]
-    return data
-
-
-def zenodo_decoder(data: dict, *,
+def zenodo_selector(data: dict, *,
                    skips: list = ['Spectroscopic',
                                   'Spectrum overview'],
                    keeps: list = ['Definitions file',
                                   'line list',
                                   'partition function',
                                   'opacity']):
-    """
-        data: dict()
-            in root[molecule type][molecule][isotope][database][data]
-        skips: [str] or []
-        keeps: [str] or []
-    
-    The function accepts an data input and removes and keeps selected properties.
-    Then a description of the archive file will then be generated.
-    """
+
+    def remove_skipped_data(data: dict, *, skips: list = ['Spectroscopic', 'Spectrum overview']):
+        """
+        The function drops the data from json archive by a skips list
+        in this case Spectroscopic and spectrum overview has been skipped
+        """
+        tmp = []
+
+        for skip in skips:
+            for item in data:
+                if skip in item:
+                    tmp.append(item)
+                else:
+                    pass
+        for item in tmp:
+            del data[item]
+        return data
+
+    def keep_kept_data(data: dict, *,
+                    keeps: list = ['Definitions file', 'line list', 'partition function', 'opacity']):
+        """
+        The function keeps the data from json archive by a keeps list and drops the rest properties
+        in this case ['Definitions file', 'line list', 'partition function', 'opacity'] has been dropped
+        """
+        tmp = []
+        res = dict()
+        for keep in keeps:
+            for item in data['data']:
+                if keep in item:
+                    res[item] = data['data'][item]
+                else:
+                    pass
+        # res = dict()
+        # for item in data:
+        #     if item in tmp:
+        #         del data[item]
+        return res
+
+    # data = remove_skipped_data(data, skips=skips)
+    data['data'] = keep_kept_data(data, keeps=keeps)
+
+    return data
+
+def zenodo_description(data: dict):
+    idt = 2
     url = data['url']
     data = data['data']
-
+    def bold(text, br=False):
+        if br:
+            return r"<strong>{text}</strong><br>".format(text=text)
+        else:
+            return r"<strong>{text}</strong>".format(text=text)
+    def insert_hyperlink(url):
+        return r'<a href="{url}">{url}<a>'.format(url=url)
+    
     def insert_space(n=1):
         return '&nbsp;'*n
     
-    # set.intersection could not be used here as the keys in skips
-    # may be a subset of the keys in data
-    data = remove_skipped_data(data, skips=skips)
-    data = keep_kept_data(data, keeps=keeps)
-
-    reference_base = """J. Tennyson, S.N. Yurchenko A.F. Al-Refaie, V.H.J. Clark, K.L. Chubb,E.K. Conway, A. Dewan, M.N. Gorman, C. Hill, A.E. Lynas-Gray, T. Mellor, L.K. McKemmish, A. Owens, O.L. Polyansky, M. Semenov, W. Somogyi, G. Tinetti, A. Upadhyay, I. Waldmann, Y. Wang, S. Wright and O.P. Yurchenko, The 2020 release of the ExoMol database: molecular line lists for exoplanet and other hot atmospheres, J. Quant. Spectrosc. Rad. Transf., 255, 107228 (2020).[https://doi.org/10.1016/j.jqsrt.2020.107228.]"""
-    reference_ExoMol = "Root references for ExoMol database: <br>{space}1. {ref}<br>".format(
+    # reference_base = """J. Tennyson, S.N. Yurchenko A.F. Al-Refaie, V.H.J. Clark, K.L. Chubb,E.K. Conway, A. Dewan, M.N. Gorman, C. Hill, A.E. Lynas-Gray, T. Mellor, L.K. McKemmish, A. Owens, O.L. Polyansky, M. Semenov, W. Somogyi, G. Tinetti, A. Upadhyay, I. Waldmann, Y. Wang, S. Wright and O.P. Yurchenko, The 2020 release of the ExoMol database: molecular line lists for exoplanet and other hot atmospheres, J. Quant. Spectrosc. Rad. Transf., 255, 107228 (2020).[<a href="https://doi.org/10.1016/j.jqsrt.2020.107228">https://doi.org/10.1016/j.jqsrt.2020.107228<a>]"""
+    reference_base = """Tennyson, J., Yurchenko, S. N., Al-Refaie, A. F., Clark, V. H. J., Chubb, K. L., Conway, E. K., Dewan, A., Gorman, M. N., Hill, C., Lynas-Gray, A. E., Mellor, T., McKemmish, L. K., Owens, A., Polyansky, O. L., Semenov, M., Somogyi, W., Tinetti, G., Upadhyay, A., Waldmann, I., Wang, Y., Wright, S., Yurchenko, O. P., "The 2020 release of the ExoMol database: molecular line lists for exoplanet and other hot atmospheres", J. Quant. Spectrosc. Rad. Transf., 255, 107228 (2020).[<a href="https://doi.org/10.1016/j.jqsrt.2020.107228">https://doi.org/10.1016/j.jqsrt.2020.107228<a>]"""
+    
+    reference_ExoMol = "<strong>Root references for ExoMol database:</strong> <br>{space}1. {ref}<br>".format(
         space=insert_space(n=2), ref=reference_base)
     descrption_ini = 'The dataset is an archive of ExoMol page, {url}.<br> Please check the reference details according to the following description or directly from the website.<br><br>'.format(
         url=url)
     res = {'description': descrption_ini,
            'reference': set([reference_base]),
+        #    'reference': set(),
            'files': list()}
     for item in data:
         if item == 'Definitions file':
             file_name = data[item]['url'].split('/')[-1]
             res['files'].append(file_name)
-            res['description'] += 'Definitions file:<br>%s<br>' % file_name
+            res['description'] += '{title}<br>{file_name}<br>'.format(title=bold("Definitions file:"), file_name=file_name)
             res['description'] += reference_ExoMol
         else:
 
             res['description'] += '<br>{title}<br>{des}:<br>'.format(
-                title=item, des=data[item]['description'])
+                title=bold(item), des=data[item]['description'])
             for cnt, file in enumerate(data[item]['files']):
                 file_name = file['file_name']
                 res['files'].append(file_name)
@@ -125,12 +128,76 @@ def zenodo_decoder(data: dict, *,
                     space=insert_space(n=4), des=file['description'])
                 # if cnt == len(data[item]['files'])-1:
                 #     res['description'] += '<br>'
-            res['description'] += 'References:<br>'
+            res['description'] += bold('References:', br=True)
             for numbering, ref in enumerate(data[item]['references']):
                 res['reference'].add(ref)
+                ref_hyper = ref
+                for link in list(re.findall('\[https.*?\]', ref)):
+                    ref_hyper = ref_hyper.replace(link, insert_hyperlink(link))
                 res['description'] += "{space}{numbering}. {ref}<br>".format(
-                    space=insert_space(n=2), numbering=numbering+1, ref=ref)
+                    space=insert_space(n=2), numbering=numbering+1, ref=ref_hyper)
     return res
+
+# def zenodo_decoder(data: dict, *,
+#                    skips: list = ['Spectroscopic',
+#                                   'Spectrum overview'],
+#                    keeps: list = ['Definitions file',
+#                                   'line list',
+#                                   'partition function',
+#                                   'opacity']):
+#     """
+#         data: dict()
+#             in root[molecule type][molecule][isotope][database][data]
+#         skips: [str] or []
+#         keeps: [str] or []
+    
+#     The function accepts an data input and removes and keeps selected properties.
+#     Then a description of the archive file will then be generated.
+#     """
+#     url = data['url']
+#     data = data['data']
+
+#     def insert_space(n=1):
+#         return '&nbsp;'*n
+    
+#     # set.intersection could not be used here as the keys in skips
+#     # may be a subset of the keys in data
+#     data = remove_skipped_data(data, skips=skips)
+#     data = keep_kept_data(data, keeps=keeps)
+
+#     reference_base = """J. Tennyson, S.N. Yurchenko A.F. Al-Refaie, V.H.J. Clark, K.L. Chubb,E.K. Conway, A. Dewan, M.N. Gorman, C. Hill, A.E. Lynas-Gray, T. Mellor, L.K. McKemmish, A. Owens, O.L. Polyansky, M. Semenov, W. Somogyi, G. Tinetti, A. Upadhyay, I. Waldmann, Y. Wang, S. Wright and O.P. Yurchenko, The 2020 release of the ExoMol database: molecular line lists for exoplanet and other hot atmospheres, J. Quant. Spectrosc. Rad. Transf., 255, 107228 (2020).[https://doi.org/10.1016/j.jqsrt.2020.107228.]"""
+#     reference_ExoMol = "Root references for ExoMol database: <br>{space}1. {ref}<br>".format(
+#         space=insert_space(n=2), ref=reference_base)
+#     descrption_ini = 'The dataset is an archive of ExoMol page, {url}.<br> Please check the reference details according to the following description or directly from the website.<br><br>'.format(
+#         url=url)
+#     res = {'description': descrption_ini,
+#            'reference': set([reference_base]),
+#            'files': list()}
+#     for item in data:
+#         if item == 'Definitions file':
+#             file_name = data[item]['url'].split('/')[-1]
+#             res['files'].append(file_name)
+#             res['description'] += 'Definitions file:<br>%s<br>' % file_name
+#             res['description'] += reference_ExoMol
+#         else:
+
+#             res['description'] += '<br>{title}<br>{des}:<br>'.format(
+#                 title=item, des=data[item]['description'])
+#             for cnt, file in enumerate(data[item]['files']):
+#                 file_name = file['file_name']
+#                 res['files'].append(file_name)
+#                 res['description'] += '{space}{file_name}<br>'.format(
+#                     space=insert_space(n=2), file_name=file_name)
+#                 res['description'] += '{space}{des}<br>'.format(
+#                     space=insert_space(n=4), des=file['description'])
+#                 # if cnt == len(data[item]['files'])-1:
+#                 #     res['description'] += '<br>'
+#             res['description'] += 'References:<br>'
+#             for numbering, ref in enumerate(data[item]['references']):
+#                 res['reference'].add(ref)
+#                 res['description'] += "{space}{numbering}. {ref}<br>".format(
+#                     space=insert_space(n=2), numbering=numbering+1, ref=ref)
+#     return res
 
 
 def zenodo_ini(token: str):
@@ -207,7 +274,7 @@ def zenodo_upload(*, deposit_id: str, bucket_url: str, files: list, path_root: s
             response=r.status_code))
 
 
-def zenodo_metadata(*, data: dict, res: dict, db: str, isotope: str, path_file: str):
+def zenodo_metadata(*, data: dict, db: str, isotope: str, path_file: str, field:list):
     """
     This function prepares metadata for the Zenodo reistration, including
     version matching
@@ -270,15 +337,15 @@ def zenodo_metadata(*, data: dict, res: dict, db: str, isotope: str, path_file: 
 
     def match_keywords(data):
         # match keywords by the files included in dataset
-
+        default_keywords = {'opacity':['opacity', 'ExoMolOP'],
+                            'line list':['line list'],
+                            'partition function':['partition function']
+                            }
         keywords = ["ExoMol"]
-        for key in data['data']:
-            if 'opacity' in key:
-                keywords += ['Opacity', 'ExoMolOP']
-            elif 'line list' in key:
-                keywords += ['line list']
-            elif 'partition function' in key:
-                keywords += ['partition function']
+        for item in data['data']:
+            for key in default_keywords:
+                if key in item:
+                    keywords += default_keywords[key]
         return keywords
 
     def match_grants(data):
@@ -291,9 +358,14 @@ def zenodo_metadata(*, data: dict, res: dict, db: str, isotope: str, path_file: 
                 grants += [{"id": "10.13039/501100000780::883830"},
                            {"id": "267219"}, {"id": "10.13039/501100000690::ST/R000476/1"}]
         return grants
+    
+    
+    data = zenodo_selector(data, keeps=field)
+    
+    res = zenodo_description(data)
+    
     path_def = '/'.join([path_file,
                          [item for item in res['files'] if '.def' in item][0]])
-
     version = search_version(path_def)
     creators = match_creators(res)
     publication_date = '-'.join([version[0:4], version[4:6], version[6::]])
@@ -323,14 +395,16 @@ def zenodo_metadata(*, data: dict, res: dict, db: str, isotope: str, path_file: 
     return metadata
 
 
-def zenodo_main(data: dict, *, token: str = '', path_root: str):
+def zenodo_main(data: dict, *, token: str = '', path_root: str, field = ['Definitions file',
+                                                                         'line list',
+                                                                         'partition function',
+                                                                         'opacity']):
     """
     data: archived json data
     token: Zenodo authorization token
     path_root: the
     The main function of registration process.
     """
-    
     # traverse the archive json data: molecule, isotope, database 
     for cat in data:
         for molecule in data[cat]:
@@ -343,18 +417,20 @@ def zenodo_main(data: dict, *, token: str = '', path_root: str):
                 if db is False:
                     print('no recommended db found, {isotope}skipped'.format(
                         isotope=isotope))
+                    continue
+
                 path_file = path_root + \
                     '/'.join(isotope_data[db]['url'].split('/')[-3::])
 
-                res = zenodo_decoder(data=isotope_data[db],
-                                     skips=['Spectroscopic', 'Spectrum overview'])
                 r = zenodo_ini(token=token)
                 bucket_url = r.json()["links"]["bucket"]
                 deposit_id = r.json()['id']
-                # tbc
+                
                 metadata = zenodo_metadata(
-                    data=isotope_data[db], res=res, db=db, isotope=isotope, path_file=path_file)
-
+                    data=isotope_data[db], db=db, isotope=isotope, path_file=path_file, field=field)
+                
+                res = zenodo_description(isotope_data[db])
+                
                 zenodo_fill(deposit_id=deposit_id,
                             metadata=metadata, token=token, db=db, isotope=isotope)
                 zenodo_upload(deposit_id=deposit_id, bucket_url=bucket_url,
@@ -363,18 +439,25 @@ def zenodo_main(data: dict, *, token: str = '', path_root: str):
 
 if __name__ == '__main__':
 
-    ACCESS_TOKEN = 'Mitwo0cwfer47Lvx51CTawELNJt9OYknMfP5WOvmNvJcYspgo9dGYDQiEFlL'
-    info = json.load(open('../Archive/data_AlH.json', 'r'))
-    pf = "C:\\Users\\Yulin\\OneDrive\\UCL\\Course\\Project\\Jonathan\\Exonodo\\sample_data\\mnt\\data\\exomol\\exomol3_data\\AlH\\26Al-1H\\AlHambra"
-    path_root = '../sample_data/mnt/data/exomol/exomol3_data/'
-    cat = 'metal hydrides'
-    molecule = 'AlH'
-    isotope = '26Al1H'
+    # ACCESS_TOKEN = 'Mitwo0cwfer47Lvx51CTawELNJt9OYknMfP5WOvmNvJcYspgo9dGYDQiEFlL'
+    # info = json.load(open('../Archive/data_AlH.json', 'r'))
+    # pf = "C:\\Users\\Yulin\\OneDrive\\UCL\\Course\\Project\\Jonathan\\Exonodo\\sample_data\\mnt\\data\\exomol\\exomol3_data\\AlH\\26Al-1H\\AlHambra"
+    # path_root = '../sample_data/mnt/data/exomol/exomol3_data/'
+    # cat = 'metal hydrides'
+    # molecule = 'AlH'
+    # isotope = '26Al1H'
+    # db = find_recommend(info[cat][molecule][isotope])
+    # data = info[cat][molecule][isotope][db]
+
+    # info = json.load(open('../Archive/data_26Al1H.json', 'r'))
+    # res = zenodo_decoder(data)
+    # md = zenodo_metadata(data=data, res=res, db=db,
+                        #  isotope=isotope, path_file=pf)
+    # zenodo_main(data=info, token=ACCESS_TOKEN, path_root=path_root)
+    info = json.load(open('../sample/data_24Mg16O.json', 'r'))
+    cat = 'metal oxides'
+    molecule = 'MgO'
+    isotope = '24Mg16O'
     db = find_recommend(info[cat][molecule][isotope])
     data = info[cat][molecule][isotope][db]
 
-    info = json.load(open('../Archive/data_26Al1H.json', 'r'))
-    res = zenodo_decoder(data)
-    md = zenodo_metadata(data=data, res=res, db=db,
-                         isotope=isotope, path_file=pf)
-    # zenodo_main(data=info, token=ACCESS_TOKEN, path_root=path_root)

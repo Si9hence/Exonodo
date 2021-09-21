@@ -1,0 +1,104 @@
+{
+    "metal oxides": {
+        "MgO": {
+            "url": "https://exomol.com/data/molecules/MgO",
+            "24Mg16O": {
+                "url": "https://exomol.com/data/molecules/MgO/24Mg-16O",
+                "xsec-LiTY": {
+                    "url": "https://exomol.com/data/molecules/MgO/24Mg-16O/xsec-LiTY",
+                    "recommended": false,
+                    "data": {
+                        "xsec-LiTY: cross section": {
+                            "description": "Online absorption cross section service: this 24Mg16O cross section has been generated from the line list LiTY [Li et al, 2019] using the procedure described in [Hill et al. (2013)].",
+                            "references": [
+                                "Li, H. Y., Tennyson, J., Yurchenko, S. N., \"ExoMol line lists \u2013 XXXII. The rovibronic spectrum of MgO\", Monthly Notices of the Royal Astronomical Society 486, 2351-2365 (2019). [https://doi.org/10.1093/mnras/stz912][19LiTeYu.MgO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "24Mg-16O",
+                                    "description": "Absorption cross section service for (24Mg)(16O)",
+                                    "url": "https://exomol.com/xsec/24Mg-16O"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "LiTY": {
+                    "url": "https://exomol.com/data/molecules/MgO/24Mg-16O/LiTY",
+                    "recommended": true,
+                    "data": {
+                        "Definitions file": {
+                            "url": "https://exomol.com/db/MgO/24Mg-16O/LiTY/24Mg-16O__LiTY.def"
+                        },
+                        "Spectroscopic Model": {
+                            "url": "https://exomol.com/models/MgO/24Mg-16O/LiTY/"
+                        },
+                        "Spectrum overview": {
+                            "url": "/media/uploads/spectrum-images/24Mg-16O__LiTY__spectrum.png"
+                        },
+                        "LiTY: line list": {
+                            "description": "The LiTY empirical MgO line list",
+                            "references": [
+                                "Li, H. Y., Tennyson, J., Yurchenko, S. N., \"ExoMol line lists \u2013 XXXII. The rovibronic spectrum of MgO\", Monthly Notices of the Royal Astronomical Society 486, 2351-2365 (2019). [https://doi.org/10.1093/mnras/stz912][19LiTeYu.MgO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "24Mg-16O__LiTY.trans.bz2",
+                                    "description": "LiTY (24Mg)(16O) line list transition file.",
+                                    "url": "https://exomol.com/db/MgO/24Mg-16O/LiTY/24Mg-16O__LiTY.trans.bz2"
+                                },
+                                {
+                                    "file_name": "24Mg-16O__LiTY.states.bz2",
+                                    "description": "LiTY (24Mg)(16O) line list States file.",
+                                    "url": "https://exomol.com/db/MgO/24Mg-16O/LiTY/24Mg-16O__LiTY.states.bz2"
+                                }
+                            ]
+                        },
+                        "LiTY: partition function": {
+                            "description": "The LiTY empirical MgO line list",
+                            "references": [
+                                "Li, H. Y., Tennyson, J., Yurchenko, S. N., \"ExoMol line lists \u2013 XXXII. The rovibronic spectrum of MgO\", Monthly Notices of the Royal Astronomical Society 486, 2351-2365 (2019). [https://doi.org/10.1093/mnras/stz912][19LiTeYu.MgO]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "24Mg-16O__LiTY.pf",
+                                    "description": "LiTY (24Mg)(16O) line list partition function.",
+                                    "url": "https://exomol.com/db/MgO/24Mg-16O/LiTY/24Mg-16O__LiTY.pf"
+                                }
+                            ]
+                        },
+                        "LiTY: opacity": {
+                            "description": "The LiTY empirical MgO line list",
+                            "references": [
+                                "Li, H. Y., Tennyson, J., Yurchenko, S. N., \"ExoMol line lists \u2013 XXXII. The rovibronic spectrum of MgO\", Monthly Notices of the Royal Astronomical Society 486, 2351-2365 (2019). [https://doi.org/10.1093/mnras/stz912][19LiTeYu.MgO]",
+                                "Chubb, K. L., Rocchetto, M., Yurchenko, S. N., Min, M., Waldmann, I., Barstow, J. K., Molliere, P., Al-Refaie, A. F, Phillips, M. W., Tennyson, J., \"The ExoMolOP database: Cross sections and k-tables for molecules of interest in high-temperature exoplanet atmospheres\", Astronomy and Astrophysics 646, A21 (2020). [http://dx.doi.org/10.1051/0004-6361/202038350][20ChRoYu.]"
+                            ],
+                            "files": [
+                                {
+                                    "file_name": "24Mg-16O__LiTY.R1000_0.3-50mu.ktable.ARCiS.fits.gz",
+                                    "description": "ARCiS k-tables at R= 1000 (0.3-50mu) in fits format (gzipped): LiTY (24Mg)(16O) line list.",
+                                    "url": "https://exomol.com/db/MgO/24Mg-16O/LiTY/24Mg-16O__LiTY.R1000_0.3-50mu.ktable.ARCiS.fits.gz"
+                                },
+                                {
+                                    "file_name": "24Mg-16O__LiTY.R1000_0.3-50mu.ktable.petitRADTRANS.h5",
+                                    "description": "petitRADTRANS k-tables at R= 1000 (0.3-50mu) in HDF5 format: LiTY (24Mg)(16O) line list.",
+                                    "url": "https://exomol.com/db/MgO/24Mg-16O/LiTY/24Mg-16O__LiTY.R1000_0.3-50mu.ktable.petitRADTRANS.h5"
+                                },
+                                {
+                                    "file_name": "24Mg-16O__LiTY.R1000_0.3-50mu.ktable.NEMESIS.kta",
+                                    "description": "NEMESIS k-tables at R= 1000 (0.3-50mu) in NEMESIS-kta format: LiTY (24Mg)(16O) line list.",
+                                    "url": "https://exomol.com/db/MgO/24Mg-16O/LiTY/24Mg-16O__LiTY.R1000_0.3-50mu.ktable.NEMESIS.kta"
+                                },
+                                {
+                                    "file_name": "24Mg-16O__LiTY.R15000_0.3-50mu.xsec.TauREx.h5",
+                                    "description": "TauREx k-tables at R= 15000 (0.3-50mu) in HDF5 format: LiTY (24Mg)(16O) line list.",
+                                    "url": "https://exomol.com/db/MgO/24Mg-16O/LiTY/24Mg-16O__LiTY.R15000_0.3-50mu.xsec.TauREx.h5"
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

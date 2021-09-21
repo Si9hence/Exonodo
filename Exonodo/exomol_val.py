@@ -53,7 +53,7 @@ def data_validation(path_json):
     if len(check_rec) == 0:
         print('the collected data, {path_json}, has been verified to be correct by exomol.all'.format(path_json=path_json))
     else:
-        print("following molecules do not match with exomol.al")
+        print("following molecules do not match with exomol.all")
         for item in check_rec:
             print(item)
     return check_rec

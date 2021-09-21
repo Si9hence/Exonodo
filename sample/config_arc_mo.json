@@ -1,0 +1,5 @@
+{
+    "option": "arc",
+    "path_arc": "./metal_oxides.json",
+    "sub_set": {"cat":["metal oxides"]}
+}
